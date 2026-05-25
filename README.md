@@ -1,99 +1,112 @@
 # Yash Chauhan
 
 <p>
-  <img src="https://img.shields.io/badge/AI_systems-0D1117?style=flat-square&labelColor=0D1117&color=14B8A6" alt="AI systems">
-  <img src="https://img.shields.io/badge/cloud_%2F_ops-0D1117?style=flat-square&labelColor=0D1117&color=3B82F6" alt="Cloud and operations">
-  <img src="https://img.shields.io/badge/applied_ML-0D1117?style=flat-square&labelColor=0D1117&color=F59E0B" alt="Applied ML">
-  <img src="https://img.shields.io/badge/full--stack_product-0D1117?style=flat-square&labelColor=0D1117&color=64748B" alt="Full-stack product engineering">
+  <a href="https://www.linkedin.com/in/yash-vks-chauhan"><img src="https://img.shields.io/badge/LinkedIn-yash--vks--chauhan-0D1117?style=flat-square&logo=linkedin&logoColor=white&labelColor=0D1117&color=2563EB" alt="LinkedIn"></a>
+  <a href="https://github.com/yash-vks-chauhan?tab=repositories"><img src="https://img.shields.io/badge/GitHub-projects-0D1117?style=flat-square&logo=github&logoColor=white&labelColor=0D1117&color=64748B" alt="GitHub projects"></a>
+  <img src="https://img.shields.io/badge/CSE_AI%2FML-SRM-0D1117?style=flat-square&labelColor=0D1117&color=14B8A6" alt="CSE AI/ML at SRM">
+  <img src="https://img.shields.io/badge/AWS-ML_Specialty-0D1117?style=flat-square&logo=amazonwebservices&logoColor=white&labelColor=0D1117&color=F59E0B" alt="AWS ML Specialty">
 </p>
 
-I build AI-backed products and infrastructure: systems that combine model behavior, backend contracts, data flow, dashboards, and deployment concerns.
-
-I am most interested in projects where software has to be more than a demo: it needs clear failure behavior, useful observability, understandable interfaces, and enough structure that another engineer can inspect how it works.
+```txt
+profile > Yash Chauhan
+mode    > AI/ML engineering, full-stack systems, observability
+base    > Chennai, India | B.Tech CSE, AI/ML specialization
+recent  > IIT Madras research intern | Hindalco predictive-maintenance intern
+signal  > I like systems where the evidence, failure path, and metrics are visible.
+```
 
 <p align="center">
-  <img src="./assets/work-map.svg" alt="Engineering range: AI systems, cloud operations, medical ML, and product engineering" width="100%" />
+  <img src="./assets/signal-map.svg" alt="Signal map across research, systems, ML pipelines, and product engineering" width="100%" />
 </p>
 
-## What I Build
+## Choose A Mode
 
-- AI systems with retrieval, evaluation, refusal logic, fallback paths, and auditability.
-- Cloud and operations tools that surface incidents, metrics, service health, and recovery actions.
-- Applied ML pipelines with training, inference, metrics, and inspection workflows.
-- Full-stack products with real user flows, admin flows, authentication, data models, and polished UI.
+<details open>
+<summary><strong>Research mode</strong> - data, metrics, and policy-facing analysis</summary>
 
-## Featured Work
+- Research Intern at IIT Madras working on emergency medical response analytics.
+- Co-authored an under-review paper using 3.59M ambulance dispatch records from Tamil Nadu 108 EMS.
+- Built anomaly and counterfactual-response-time pipelines with autoencoders, XGBoost, SHAP, OSMnx, NetworkX, and geospatial analysis.
+- Designed operational metrics including Time Drift Index and Quantum Stability Index for district-level stability and equity analysis.
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/yash-vks-chauhan/Glassbox">GlassBox</a></h3>
-      <p>Auditable AI agent for wealth-advisory workflows.</p>
-      <p>Uses grounded retrieval, claim verification, refusal routing, audit replay, trust scoring, and a governance dashboard.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=white" alt="Python">
-        <img src="https://img.shields.io/badge/FastAPI-111827?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
-        <img src="https://img.shields.io/badge/Next.js-111827?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
-        <img src="https://img.shields.io/badge/PostgreSQL-111827?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/yash-vks-chauhan/Autoscaler">Autoscaler</a></h3>
-      <p>Kubernetes auto-healing and observability platform.</p>
-      <p>Combines live metrics, anomaly detection, incident reasoning, chaos testing, Kubernetes recovery actions, and fallback ML.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Kubernetes-111827?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes">
-        <img src="https://img.shields.io/badge/NestJS-111827?style=flat-square&logo=nestjs&logoColor=white" alt="NestJS">
-        <img src="https://img.shields.io/badge/Prometheus-111827?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus">
-        <img src="https://img.shields.io/badge/TimescaleDB-111827?style=flat-square&logo=postgresql&logoColor=white" alt="TimescaleDB">
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/yash-vks-chauhan/CT-Denoising-U-Net">CT-Denoising-U-Net</a></h3>
-      <p>Medical image denoising pipeline for CT and X-ray scans.</p>
-      <p>Includes preprocessing, U-Net training, CLI inference, Streamlit inspection, and PSNR / SSIM / MSE evaluation.</p>
-      <p>
-        <img src="https://img.shields.io/badge/TensorFlow-111827?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow">
-        <img src="https://img.shields.io/badge/U--Net-111827?style=flat-square" alt="U-Net">
-        <img src="https://img.shields.io/badge/Streamlit-111827?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit">
-        <img src="https://img.shields.io/badge/Jupyter-111827?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter">
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/yash-vks-chauhan/Kalakraftdev">KalaKraft</a></h3>
-      <p>Full-stack e-commerce platform for art products.</p>
-      <p>Includes storefront flows, authentication, admin workflows, product management, orders, analytics, real-time features, and polished UI.</p>
-      <p>
-        <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-        <img src="https://img.shields.io/badge/Next.js-111827?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
-        <img src="https://img.shields.io/badge/Prisma-111827?style=flat-square&logo=prisma&logoColor=white" alt="Prisma">
-        <img src="https://img.shields.io/badge/Firebase-111827?style=flat-square&logo=firebase&logoColor=white" alt="Firebase">
-      </p>
-    </td>
-  </tr>
-</table>
+`Python` `Pandas` `NumPy` `SciPy` `XGBoost` `SHAP` `OSMnx` `NetworkX` `Docker`
 
-## Engineering Surface
+</details>
 
-| Area | Working with |
+<details>
+<summary><strong>Systems mode</strong> - Kubernetes, incidents, dashboards, recovery loops</summary>
+
+- Building [AutoScaler](https://github.com/yash-vks-chauhan/Autoscaler), a local-first Kubernetes auto-healing and observability platform.
+- Uses Isolation Forest, LSTM autoencoders, LLM reasoning, Random Forest fallback, SHAP explanations, chaos injection, and watchdog health checks.
+- Runs as real Kubernetes components instead of a static mock: metrics, AI engine, dashboard, healing controller, Redis, Prometheus, and TimescaleDB.
+
+`Kubernetes` `Docker` `Prometheus` `TimescaleDB` `Redis` `NestJS` `FastAPI` `Next.js`
+
+</details>
+
+<details>
+<summary><strong>ML mode</strong> - medical imaging, predictive maintenance, model quality</summary>
+
+- Built [CT-Denoising-U-Net](https://github.com/yash-vks-chauhan/CT-Denoising-U-Net), a medical image denoising pipeline for CT and X-ray scans.
+- Achieved about 12 dB PSNR gain and about 95% noise reduction on lung CT slices.
+- At Hindalco, worked on predictive-maintenance models with Proficy Historian, MTell, ARIMA, anomaly detection, and Power BI.
+- Hindalco impact: reduced unscheduled downtime by 20% and maintenance costs by 15% through early failure detection.
+
+`TensorFlow` `Keras` `OpenCV` `scikit-image` `ARIMA` `Power BI` `Jupyter`
+
+</details>
+
+<details>
+<summary><strong>Product mode</strong> - full-stack apps with real workflows</summary>
+
+- Built [KalaKraft](https://github.com/yash-vks-chauhan/Kalakraftdev), a marketplace for hand-crafted resin art.
+- Implemented storefront flows, admin dashboard, inventory, coupons, reviews, support tickets, media optimization, auth, real-time order updates, and email flows.
+- I care about complete products: not just screens, but auth, data, admin paths, feedback loops, and production deployment.
+
+`Next.js` `React` `TypeScript` `PostgreSQL` `Prisma` `Firebase` `Cloudinary` `Pusher` `Vercel`
+
+</details>
+
+## Featured Projects
+
+| Project | Why it matters | Stack |
+| --- | --- | --- |
+| [GlassBox](https://github.com/yash-vks-chauhan/Glassbox) | Auditable wealth-advisory AI: grounded answers, refusal routing, claim verification, trust metrics, and replayable audit trails. | FastAPI, Next.js, scikit-learn, PostgreSQL |
+| [AutoScaler](https://github.com/yash-vks-chauhan/Autoscaler) | Kubernetes self-healing platform with anomaly detection, chaos testing, explainability, and fallback ML. | Kubernetes, Prometheus, TimescaleDB, NestJS, FastAPI |
+| [CT-Denoising-U-Net](https://github.com/yash-vks-chauhan/CT-Denoising-U-Net) | Medical-image denoising pipeline with U-Net training, inference, dashboards, and quality metrics. | TensorFlow, OpenCV, Streamlit, Jupyter |
+| [KalaKraft](https://github.com/yash-vks-chauhan/Kalakraftdev) | Full-stack commerce product with customer, admin, inventory, analytics, real-time, and deployment workflows. | Next.js, TypeScript, Prisma, Firebase |
+
+## Proof Points
+
+| Area | Evidence |
 | --- | --- |
-| AI / ML | RAG, model evaluation, scikit-learn, TensorFlow, U-Net, anomaly detection |
-| Backend | FastAPI, NestJS, REST APIs, WebSockets, auth, rate limiting, structured logs |
-| Frontend | Next.js, React, TypeScript, Tailwind, dashboards, charts, product flows |
-| Data | PostgreSQL, TimescaleDB, vector stores, audit logs, replayable traces |
-| Infrastructure | Docker, Kubernetes, Prometheus, AWS-oriented deployment |
+| Research scale | 3.59M ambulance dispatch records, 38 districts, 44 emergency types |
+| Model evaluation | WMAPE 8.37% counterfactual benchmark, PSNR / SSIM / MSE image-quality tracking |
+| Operational ML | 8,567 anomalous dispatch events, 5,000+ simulated ambulance trips, 100+ data quality checks |
+| Industrial impact | 20% downtime reduction and 15% maintenance-cost reduction during predictive-maintenance work |
+| Certifications | AWS Cloud Practitioner, AWS Certified Machine Learning - Specialty, DeepLearning.AI ML/DL specializations |
 
-## Engineering Taste
+## Tools I Reach For
 
-I like projects where the hard parts are visible: what data enters the system, what decisions are made, what gets logged, what happens when confidence is low, and how someone can debug the system later.
+<p>
+  <img src="https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/FastAPI-111827?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Next.js-111827?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
+  <img src="https://img.shields.io/badge/TensorFlow-111827?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow">
+  <img src="https://img.shields.io/badge/scikit--learn-111827?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/PostgreSQL-111827?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/Docker-111827?style=flat-square&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/Kubernetes-111827?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes">
+  <img src="https://img.shields.io/badge/Prometheus-111827?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus">
+</p>
 
-GitHub is where I keep the work: [@yash-vks-chauhan](https://github.com/yash-vks-chauhan)
+## What I Care About
+
+I like projects where the hard parts are visible: what data enters the system, what decisions are made, what confidence means, what gets logged, what happens when something fails, and how someone can debug it later.
 
 <!-- Add when ready:
 - Portfolio:
-- LinkedIn:
 - Resume:
 - Email:
 -->
