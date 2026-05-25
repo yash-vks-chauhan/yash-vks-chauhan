@@ -8,85 +8,113 @@
 </p>
 
 ```txt
-profile > Yash Chauhan
-mode    > AI/ML engineering, full-stack systems, observability
-base    > Chennai, India | B.Tech CSE, AI/ML specialization
-recent  > IIT Madras research intern | Hindalco predictive-maintenance intern
-signal  > I like systems where the evidence, failure path, and metrics are visible.
+run ./yash
+
+> builds:      AI systems, ML pipelines, full-stack products
+> likes:       metrics, traces, recovery paths, dashboards
+> recent:      IIT Madras research + Hindalco predictive maintenance
+> current:     turning model demos into inspectable systems
 ```
 
-<p align="center">
-  <img src="./assets/signal-map.svg" alt="Signal map across research, systems, ML pipelines, and product engineering" width="100%" />
-</p>
+I am a CSE student specializing in AI/ML. I like building things where the interesting part is not hidden behind a single model call: the data pipeline, the failure path, the dashboard, the metric, the fallback, and the reason a decision was made.
 
-## Choose A Mode
+## Open A Drawer
 
 <details open>
-<summary><strong>Research mode</strong> - data, metrics, and policy-facing analysis</summary>
+<summary><kbd>01</kbd> <strong>Fast scan</strong></summary>
 
-- Research Intern at IIT Madras working on emergency medical response analytics.
-- Co-authored an under-review paper using 3.59M ambulance dispatch records from Tamil Nadu 108 EMS.
-- Built anomaly and counterfactual-response-time pipelines with autoencoders, XGBoost, SHAP, OSMnx, NetworkX, and geospatial analysis.
-- Designed operational metrics including Time Drift Index and Quantum Stability Index for district-level stability and equity analysis.
-
-`Python` `Pandas` `NumPy` `SciPy` `XGBoost` `SHAP` `OSMnx` `NetworkX` `Docker`
-
-</details>
-
-<details>
-<summary><strong>Systems mode</strong> - Kubernetes, incidents, dashboards, recovery loops</summary>
-
-- Building [AutoScaler](https://github.com/yash-vks-chauhan/Autoscaler), a local-first Kubernetes auto-healing and observability platform.
-- Uses Isolation Forest, LSTM autoencoders, LLM reasoning, Random Forest fallback, SHAP explanations, chaos injection, and watchdog health checks.
-- Runs as real Kubernetes components instead of a static mock: metrics, AI engine, dashboard, healing controller, Redis, Prometheus, and TimescaleDB.
-
-`Kubernetes` `Docker` `Prometheus` `TimescaleDB` `Redis` `NestJS` `FastAPI` `Next.js`
+| Signal | Snapshot |
+| --- | --- |
+| Education | B.Tech CSE, Artificial Intelligence & Machine Learning, SRM Institute of Science and Technology |
+| Research | IIT Madras research intern working with emergency medical response data |
+| Industry | Hindalco predictive-maintenance intern using historian data and anomaly detection |
+| Main lanes | AI systems, observability, applied ML, full-stack product engineering |
+| Certifications | AWS Cloud Practitioner, AWS Certified Machine Learning - Specialty, DeepLearning.AI ML/DL specializations |
 
 </details>
 
 <details>
-<summary><strong>ML mode</strong> - medical imaging, predictive maintenance, model quality</summary>
+<summary><kbd>02</kbd> <strong>Research drawer</strong> - ambulance response analytics</summary>
 
-- Built [CT-Denoising-U-Net](https://github.com/yash-vks-chauhan/CT-Denoising-U-Net), a medical image denoising pipeline for CT and X-ray scans.
-- Achieved about 12 dB PSNR gain and about 95% noise reduction on lung CT slices.
-- At Hindalco, worked on predictive-maintenance models with Proficy Historian, MTell, ARIMA, anomaly detection, and Power BI.
-- Hindalco impact: reduced unscheduled downtime by 20% and maintenance costs by 15% through early failure detection.
+Worked on emergency medical response analytics at IIT Madras using Tamil Nadu 108 EMS registry data.
+
+| Built / Analyzed | Detail |
+| --- | --- |
+| Dataset scale | 3.59M ambulance dispatch records from 2017-2025 |
+| Coverage | 38 districts and 44 emergency types |
+| Detection | Autoencoder pipeline identifying 8,567 anomalous dispatch events |
+| Benchmarking | XGBoost counterfactual model with WMAPE 8.37% |
+| Metrics | Time Drift Index and Quantum Stability Index for operational stability |
+| Simulation | 5,000+ ambulance trips with peak-hour, monsoon, and construction-delay scenarios |
+
+`Python` `Pandas` `NumPy` `SciPy` `XGBoost` `SHAP` `OSMnx` `NetworkX` `Folium`
+
+</details>
+
+<details>
+<summary><kbd>03</kbd> <strong>Systems drawer</strong> - incidents, Kubernetes, self-healing</summary>
+
+[AutoScaler](https://github.com/yash-vks-chauhan/Autoscaler) is my systems-heavy project: a Kubernetes observability and self-healing platform.
+
+- 3-node Kind cluster from day one, not a Docker Compose mock.
+- Isolation Forest for multivariate spikes, LSTM autoencoder for slow degradation, LLM reasoning for root-cause analysis.
+- Random Forest fallback runs in-cluster when external model providers are unavailable.
+- SHAP explanations surface per-metric feature importance.
+- Chaos Engine injects 6 failure types across 3 intensity levels.
+- Watchdog health-checks 7 components every 30 seconds.
+
+`Kubernetes` `Docker` `Prometheus` `TimescaleDB` `Redis` `NestJS` `FastAPI` `Next.js` `SHAP`
+
+</details>
+
+<details>
+<summary><kbd>04</kbd> <strong>ML drawer</strong> - images, sensors, model quality</summary>
+
+[CT-Denoising-U-Net](https://github.com/yash-vks-chauhan/CT-Denoising-U-Net) is a medical-imaging pipeline for denoising CT and X-ray scans.
+
+- Mixed-precision U-Net for medical image artifact reduction.
+- About 12 dB PSNR gain and about 95% noise reduction on lung CT slices.
+- Per-image PSNR / SSIM / MSE tracking across validation scans.
+- Streamlit dashboard for noisy | clean | denoised comparisons.
+
+At Hindalco, I worked on predictive maintenance using Proficy Historian, MTell, ARIMA, anomaly detection, and Power BI. Resume impact: 20% lower unscheduled downtime and 15% lower maintenance cost.
 
 `TensorFlow` `Keras` `OpenCV` `scikit-image` `ARIMA` `Power BI` `Jupyter`
 
 </details>
 
 <details>
-<summary><strong>Product mode</strong> - full-stack apps with real workflows</summary>
+<summary><kbd>05</kbd> <strong>Product drawer</strong> - full-stack apps with real workflows</summary>
 
-- Built [KalaKraft](https://github.com/yash-vks-chauhan/Kalakraftdev), a marketplace for hand-crafted resin art.
-- Implemented storefront flows, admin dashboard, inventory, coupons, reviews, support tickets, media optimization, auth, real-time order updates, and email flows.
-- I care about complete products: not just screens, but auth, data, admin paths, feedback loops, and production deployment.
+[KalaKraft](https://github.com/yash-vks-chauhan/Kalakraftdev) is a full-stack marketplace for hand-crafted resin art.
+
+- Storefront for browsing, buying, and tracking artisan products.
+- Admin dashboard for inventory, coupons, reviews, users, support tickets, and revenue metrics.
+- Image/video pipeline with Sharp + Cloudinary.
+- Firebase / NextAuth authentication and role-based access.
+- Real-time order updates and low-stock alerts with Pusher.
+- Email flows through Sendinblue and Vercel preview deployments.
 
 `Next.js` `React` `TypeScript` `PostgreSQL` `Prisma` `Firebase` `Cloudinary` `Pusher` `Vercel`
 
 </details>
 
-## Featured Projects
+## Case Files
 
-| Project | Why it matters | Stack |
+| Case | Open it | What to look for |
 | --- | --- | --- |
-| [GlassBox](https://github.com/yash-vks-chauhan/Glassbox) | Auditable wealth-advisory AI: grounded answers, refusal routing, claim verification, trust metrics, and replayable audit trails. | FastAPI, Next.js, scikit-learn, PostgreSQL |
-| [AutoScaler](https://github.com/yash-vks-chauhan/Autoscaler) | Kubernetes self-healing platform with anomaly detection, chaos testing, explainability, and fallback ML. | Kubernetes, Prometheus, TimescaleDB, NestJS, FastAPI |
-| [CT-Denoising-U-Net](https://github.com/yash-vks-chauhan/CT-Denoising-U-Net) | Medical-image denoising pipeline with U-Net training, inference, dashboards, and quality metrics. | TensorFlow, OpenCV, Streamlit, Jupyter |
-| [KalaKraft](https://github.com/yash-vks-chauhan/Kalakraftdev) | Full-stack commerce product with customer, admin, inventory, analytics, real-time, and deployment workflows. | Next.js, TypeScript, Prisma, Firebase |
+| `case-001` | [GlassBox](https://github.com/yash-vks-chauhan/Glassbox) | Grounded AI, refusal routing, audit replay, trust scoring |
+| `case-002` | [AutoScaler](https://github.com/yash-vks-chauhan/Autoscaler) | Kubernetes, anomaly detection, chaos testing, explainability |
+| `case-003` | [CT-Denoising-U-Net](https://github.com/yash-vks-chauhan/CT-Denoising-U-Net) | U-Net training, medical image quality metrics, Streamlit inspection |
+| `case-004` | [KalaKraft](https://github.com/yash-vks-chauhan/Kalakraftdev) | Product flows, admin workflows, auth, real-time features |
 
-## Proof Points
+## Scoreboard
 
-| Area | Evidence |
-| --- | --- |
-| Research scale | 3.59M ambulance dispatch records, 38 districts, 44 emergency types |
-| Model evaluation | WMAPE 8.37% counterfactual benchmark, PSNR / SSIM / MSE image-quality tracking |
-| Operational ML | 8,567 anomalous dispatch events, 5,000+ simulated ambulance trips, 100+ data quality checks |
-| Industrial impact | 20% downtime reduction and 15% maintenance-cost reduction during predictive-maintenance work |
-| Certifications | AWS Cloud Practitioner, AWS Certified Machine Learning - Specialty, DeepLearning.AI ML/DL specializations |
+| 3.59M | 8,567 | 8.37% | ~12 dB | 20% |
+| --- | --- | --- | --- | --- |
+| EMS records analyzed | anomalous dispatch events | XGBoost WMAPE | PSNR gain | downtime reduction |
 
-## Tools I Reach For
+## Toolbox
 
 <p>
   <img src="https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=white" alt="Python">
@@ -101,9 +129,9 @@ signal  > I like systems where the evidence, failure path, and metrics are visib
   <img src="https://img.shields.io/badge/Prometheus-111827?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus">
 </p>
 
-## What I Care About
+## Engineering Taste
 
-I like projects where the hard parts are visible: what data enters the system, what decisions are made, what confidence means, what gets logged, what happens when something fails, and how someone can debug it later.
+I like projects where the hard parts are inspectable: what data entered, what changed, what confidence means, what failed, what recovered, and what evidence is left behind.
 
 <!-- Add when ready:
 - Portfolio:
