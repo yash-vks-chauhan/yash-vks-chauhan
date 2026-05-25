@@ -1,21 +1,21 @@
-<p align="center">
-  <img src="./assets/header.svg" alt="Yash Chauhan - auditable AI systems and full-stack engineering" width="100%" />
-</p>
+# Yash Chauhan
 
-<p align="center">
+<p>
   <a href="https://github.com/yash-vks-chauhan/Glassbox"><img src="https://img.shields.io/badge/now-GlassBox-0D1117?style=flat-square&labelColor=0D1117&color=14B8A6" alt="Now building GlassBox"></a>
   <a href="https://github.com/yash-vks-chauhan?tab=repositories"><img src="https://img.shields.io/badge/github-portfolio-0D1117?style=flat-square&logo=github&logoColor=white&labelColor=0D1117&color=3B82F6" alt="GitHub portfolio"></a>
   <img src="https://img.shields.io/badge/focus-auditable_AI-0D1117?style=flat-square&labelColor=0D1117&color=F59E0B" alt="Focus: auditable AI">
   <img src="https://img.shields.io/badge/stack-Python_+_TypeScript-0D1117?style=flat-square&labelColor=0D1117&color=64748B" alt="Python and TypeScript">
 </p>
 
-## Current Work
-
 I build full-stack AI systems with an emphasis on evidence, observability, and failure behavior.
 
 My main project right now is [GlassBox](https://github.com/yash-vks-chauhan/Glassbox): a wealth-advisory AI agent that answers from cited sources, verifies claims, refuses unsupported questions, records decision trails, and exposes trust metrics through a governance dashboard.
 
 The part I care about most is the layer around the model: retrieval quality, refusal logic, evaluation gates, fallback paths, audit records, and whether another person can replay what the system did later.
+
+<p align="center">
+  <img src="./assets/glassbox-flow.svg" alt="GlassBox decision path: question, retrieve, verify, decide, audit replay" width="100%" />
+</p>
 
 ## Projects Worth Opening
 
