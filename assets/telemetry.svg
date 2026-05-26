@@ -42,7 +42,7 @@
     <circle r="4" class="grn pulse"/>
     <text x="12" y="4" class="mono grn" font-size="11" letter-spacing="2">SIGNAL LOCK</text>
   </g>
-  <text x="32" y="86" class="mono soft" font-size="11">auto-refreshes every 6h via github actions · last sample <tspan class="cyan" id="tel-updated">awaiting first tick</tspan></text>
+  <text x="32" y="86" class="mono soft" font-size="11">auto-refreshes every 6h via github actions · last sample <tspan class="cyan" id="tel-updated">2026-05-26 02:59Z</tspan></text>
 
   <!-- ===== COMMIT ACTIVITY CHART ===== -->
   <g transform="translate(32 120)">
@@ -63,36 +63,36 @@
 
     <!--BARS:BEGIN-->
     <g id="tel-bars">
-      <g style="transform-origin: 55px 220px" class="bar" transform="translate(46 0)"><rect width="18" height="27" y="193" fill="#38BDF8" opacity="0.56"/></g>
-      <g style="transform-origin: 77px 220px" class="bar" transform="translate(68 0)"><rect width="18" height="45" y="175" fill="#38BDF8" opacity="0.61"/></g>
+      <g style="transform-origin: 55px 220px" class="bar" transform="translate(46 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 77px 220px" class="bar" transform="translate(68 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
       <g style="transform-origin: 99px 220px" class="bar" transform="translate(90 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
-      <g style="transform-origin: 121px 220px" class="bar" transform="translate(112 0)"><rect width="18" height="72" y="148" fill="#38BDF8" opacity="0.67"/></g>
-      <g style="transform-origin: 143px 220px" class="bar" transform="translate(134 0)"><rect width="18" height="36" y="184" fill="#38BDF8" opacity="0.58"/></g>
-      <g style="transform-origin: 165px 220px" class="bar" transform="translate(156 0)"><rect width="18" height="81" y="139" fill="#38BDF8" opacity="0.69"/></g>
-      <g style="transform-origin: 187px 220px" class="bar" transform="translate(178 0)"><rect width="18" height="152" y="68" fill="#F59E0B" opacity="1"/></g>
-      <g style="transform-origin: 209px 220px" class="bar" transform="translate(200 0)"><rect width="18" height="45" y="175" fill="#38BDF8" opacity="0.61"/></g>
+      <g style="transform-origin: 121px 220px" class="bar" transform="translate(112 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 143px 220px" class="bar" transform="translate(134 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 165px 220px" class="bar" transform="translate(156 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 187px 220px" class="bar" transform="translate(178 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 209px 220px" class="bar" transform="translate(200 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
       <g style="transform-origin: 231px 220px" class="bar" transform="translate(222 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
-      <g style="transform-origin: 253px 220px" class="bar" transform="translate(244 0)"><rect width="18" height="9" y="211" fill="#38BDF8" opacity="0.52"/></g>
-      <g style="transform-origin: 275px 220px" class="bar" transform="translate(266 0)"><rect width="18" height="63" y="157" fill="#38BDF8" opacity="0.65"/></g>
-      <g style="transform-origin: 297px 220px" class="bar" transform="translate(288 0)"><rect width="18" height="98" y="122" fill="#38BDF8" opacity="0.73"/></g>
-      <g style="transform-origin: 319px 220px" class="bar" transform="translate(310 0)"><rect width="18" height="54" y="166" fill="#38BDF8" opacity="0.63"/></g>
-      <g style="transform-origin: 341px 220px" class="bar" transform="translate(332 0)"><rect width="18" height="27" y="193" fill="#38BDF8" opacity="0.56"/></g>
+      <g style="transform-origin: 253px 220px" class="bar" transform="translate(244 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 275px 220px" class="bar" transform="translate(266 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 297px 220px" class="bar" transform="translate(288 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 319px 220px" class="bar" transform="translate(310 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 341px 220px" class="bar" transform="translate(332 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
       <g style="transform-origin: 363px 220px" class="bar" transform="translate(354 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
-      <g style="transform-origin: 385px 220px" class="bar" transform="translate(376 0)"><rect width="18" height="18" y="202" fill="#38BDF8" opacity="0.54"/></g>
-      <g style="transform-origin: 407px 220px" class="bar" transform="translate(398 0)"><rect width="18" height="63" y="157" fill="#38BDF8" opacity="0.65"/></g>
-      <g style="transform-origin: 429px 220px" class="bar" transform="translate(420 0)"><rect width="18" height="81" y="139" fill="#38BDF8" opacity="0.69"/></g>
-      <g style="transform-origin: 451px 220px" class="bar" transform="translate(442 0)"><rect width="18" height="170" y="50" fill="#F59E0B" opacity="1"/></g>
-      <g style="transform-origin: 473px 220px" class="bar" transform="translate(464 0)"><rect width="18" height="36" y="184" fill="#38BDF8" opacity="0.58"/></g>
-      <g style="transform-origin: 495px 220px" class="bar" transform="translate(486 0)"><rect width="18" height="18" y="202" fill="#38BDF8" opacity="0.54"/></g>
+      <g style="transform-origin: 385px 220px" class="bar" transform="translate(376 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 407px 220px" class="bar" transform="translate(398 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 429px 220px" class="bar" transform="translate(420 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 451px 220px" class="bar" transform="translate(442 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 473px 220px" class="bar" transform="translate(464 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 495px 220px" class="bar" transform="translate(486 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
       <g style="transform-origin: 517px 220px" class="bar" transform="translate(508 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
-      <g style="transform-origin: 539px 220px" class="bar" transform="translate(530 0)"><rect width="18" height="9" y="211" fill="#38BDF8" opacity="0.52"/></g>
-      <g style="transform-origin: 561px 220px" class="bar" transform="translate(552 0)"><rect width="18" height="72" y="148" fill="#38BDF8" opacity="0.67"/></g>
-      <g style="transform-origin: 583px 220px" class="bar" transform="translate(574 0)"><rect width="18" height="107" y="113" fill="#38BDF8" opacity="0.75"/></g>
-      <g style="transform-origin: 605px 220px" class="bar" transform="translate(596 0)"><rect width="18" height="45" y="175" fill="#38BDF8" opacity="0.61"/></g>
-      <g style="transform-origin: 627px 220px" class="bar" transform="translate(618 0)"><rect width="18" height="63" y="157" fill="#38BDF8" opacity="0.65"/></g>
-      <g style="transform-origin: 649px 220px" class="bar" transform="translate(640 0)"><rect width="18" height="36" y="184" fill="#38BDF8" opacity="0.58"/></g>
+      <g style="transform-origin: 539px 220px" class="bar" transform="translate(530 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 561px 220px" class="bar" transform="translate(552 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 583px 220px" class="bar" transform="translate(574 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 605px 220px" class="bar" transform="translate(596 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 627px 220px" class="bar" transform="translate(618 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 649px 220px" class="bar" transform="translate(640 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
       <g style="transform-origin: 671px 220px" class="bar" transform="translate(662 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
-      <g style="transform-origin: 693px 220px" class="bar" transform="translate(684 0)"><rect width="18" height="89" y="131" fill="#38BDF8" opacity="0.71"/></g>
+      <g style="transform-origin: 693px 220px" class="bar" transform="translate(684 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
     </g>
     <!--BARS:END-->
 
@@ -109,34 +109,34 @@
     <!--LANGS:BEGIN-->
     <g id="tel-langs" class="mono" font-size="10" transform="translate(14 44)">
       <g transform="translate(0 0)">
-        <text class="text">Python</text>
-        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l1-pct">38.2%</text>
+        <text class="text">Jupyter Notebook</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l1-pct">65.1%</text>
         <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
-        <rect x="0"  y="6" width="126"  height="6" fill="#38BDF8" id="tel-l1-bar" opacity="1.00"/>
+        <rect x="0"  y="6" width="215"  height="6" fill="#38BDF8" id="tel-l1-bar" opacity="1.00"/>
       </g>
       <g transform="translate(0 30)">
         <text class="text">TypeScript</text>
-        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l2-pct">27.6%</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l2-pct">15.8%</text>
         <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
-        <rect x="0"  y="6" width="91"  height="6" fill="#38BDF8" id="tel-l2-bar" opacity="0.85"/>
+        <rect x="0"  y="6" width="52"  height="6" fill="#38BDF8" id="tel-l2-bar" opacity="0.85"/>
       </g>
       <g transform="translate(0 60)">
-        <text class="text">Jupyter Notebook</text>
-        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l3-pct">18.1%</text>
+        <text class="text">Kotlin</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l3-pct">7.0%</text>
         <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
-        <rect x="0"  y="6" width="60"  height="6" fill="#38BDF8" id="tel-l3-bar" opacity="0.70"/>
+        <rect x="0"  y="6" width="23"  height="6" fill="#38BDF8" id="tel-l3-bar" opacity="0.70"/>
       </g>
       <g transform="translate(0 90)">
-        <text class="text">C++</text>
-        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l4-pct">9.4%</text>
+        <text class="text">CSS</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l4-pct">5.1%</text>
         <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
-        <rect x="0"  y="6" width="31"  height="6" fill="#38BDF8" id="tel-l4-bar" opacity="0.55"/>
+        <rect x="0"  y="6" width="17"  height="6" fill="#38BDF8" id="tel-l4-bar" opacity="0.55"/>
       </g>
       <g transform="translate(0 120)">
         <text class="text">Other</text>
-        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l5-pct">6.7%</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l5-pct">7.0%</text>
         <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
-        <rect x="0"  y="6" width="22"  height="6" fill="#38BDF8" id="tel-l5-bar" opacity="0.40"/>
+        <rect x="0"  y="6" width="23"  height="6" fill="#38BDF8" id="tel-l5-bar" opacity="0.40"/>
       </g>
     </g>
     <!--LANGS:END-->
@@ -144,9 +144,9 @@
     <g transform="translate(14 196)">
       <text class="mono dim" font-size="9" letter-spacing="2">REPOS · STARS · TOTAL CMTS</text>
       <g transform="translate(0 18)" class="mono">
-        <text class="ttl" font-size="22" font-weight="700" id="tel-stat-repos">--</text>
-        <text x="110" class="ttl" font-size="22" font-weight="700" id="tel-stat-stars">--</text>
-        <text x="220" class="ttl" font-size="22" font-weight="700" id="tel-stat-commits">--</text>
+        <text class="ttl" font-size="22" font-weight="700" id="tel-stat-repos">9</text>
+        <text x="110" class="ttl" font-size="22" font-weight="700" id="tel-stat-stars">13</text>
+        <text x="220" class="ttl" font-size="22" font-weight="700" id="tel-stat-commits">0</text>
       </g>
     </g>
   </g>
@@ -161,9 +161,9 @@
         <text class="amb" id="tel-log-t1">--:--</text>
         <text x="56"  class="cyan" id="tel-log-s1">-------</text>
         <text x="128" class="dim">·</text>
-        <text x="140" class="text" id="tel-log-r1">awaiting first telemetry tick</text>
+        <text x="140" class="text" id="tel-log-r1">--</text>
         <text x="500" class="dim">·</text>
-        <text x="512" class="soft" id="tel-log-m1">action will populate this on first run</text>
+        <text x="512" class="soft" id="tel-log-m1">--</text>
       </g>
       <g transform="translate(0 16)">
         <text class="amb" id="tel-log-t2">--:--</text>

@@ -124,9 +124,9 @@
       <text class="dim" letter-spacing="2">PAYLOAD</text>
       <text x="62" y="0" class="text">4 active</text>
       <text x="132" y="0" class="dim">·</text>
-      <text x="148" y="0" class="text"><tspan id="hud-commits">--</tspan> commits / 30d</text>
+      <text x="148" y="0" class="text"><tspan id="hud-commits">0</tspan> commits / 30d</text>
       <text x="340" y="0" class="dim">·</text>
-      <text x="356" y="0" class="text">last push <tspan class="cyan" id="hud-lastpush">polling</tspan></text>
+      <text x="356" y="0" class="text">last push <tspan class="cyan" id="hud-lastpush">11s ago</tspan></text>
     </g>
 
     <!-- mini telemetry strip -->
