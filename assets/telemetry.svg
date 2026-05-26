@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Live telemetry">
+  <defs>
+    <linearGradient id="bgT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#010409"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#38BDF8" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="gridT" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#161B22" stroke-width="0.5"/>
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Inter, sans-serif; }
+      .dim { fill: #6E7681; } .soft { fill: #8B949E; } .text { fill: #C9D1D9; } .ttl { fill: #F0F6FC; }
+      .cyan { fill: #38BDF8; } .amb { fill: #F59E0B; } .grn { fill: #10B981; } .red { fill: #F87171; }
+      .pulse { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .scan { animation: scan 8s linear infinite; }
+      .bar  { animation: rise 0.9s ease-out backwards; }
+      @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.45; } }
+      @keyframes scan  { 0% { transform: translateY(-10px); opacity: 0; } 8% { opacity: 0.6; } 92% { opacity: 0.6; } 100% { transform: translateY(540px); opacity: 0; } }
+      @keyframes rise  { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bgT)"/>
+  <rect width="1200" height="520" fill="url(#gridT)"/>
+
+  <g stroke="#38BDF8" stroke-width="1.5" fill="none">
+    <path d="M 14 14 L 14 44 M 14 14 L 44 14"/>
+    <path d="M 1186 14 L 1186 44 M 1186 14 L 1156 14"/>
+    <path d="M 14 506 L 14 476 M 14 506 L 44 506"/>
+    <path d="M 1186 506 L 1186 476 M 1186 506 L 1156 506"/>
+  </g>
+
+  <text x="32" y="42" class="mono cyan" font-size="11" letter-spacing="6">[ TELEMETRY · LIVE ]</text>
+  <text x="32" y="68" class="sans ttl" font-size="22" font-weight="700">DOWNLINK · github.com/yash-vks-chauhan</text>
+  <g transform="translate(640 60)">
+    <circle r="4" class="grn pulse"/>
+    <text x="12" y="4" class="mono grn" font-size="11" letter-spacing="2">SIGNAL LOCK</text>
+  </g>
+  <text x="32" y="86" class="mono soft" font-size="11">auto-refreshes every 6h via github actions · last sample <tspan class="cyan" id="tel-updated">awaiting first tick</tspan></text>
+
+  <!-- ===== COMMIT ACTIVITY CHART ===== -->
+  <g transform="translate(32 120)">
+    <rect width="760" height="240" fill="#0B0F14" stroke="#21262D"/>
+    <text x="14" y="22" class="mono dim" font-size="10" letter-spacing="3">CH-01 · COMMIT ACTIVITY · LAST 30 DAYS</text>
+
+    <g class="mono" font-size="8" fill="#6E7681">
+      <line x1="40" y1="50"  x2="40"  y2="220" stroke="#1F2937"/>
+      <line x1="40" y1="220" x2="740" y2="220" stroke="#1F2937"/>
+      <text x="34" y="54"  text-anchor="end">max</text>
+      <text x="34" y="110" text-anchor="end">μ+2σ</text>
+      <text x="34" y="170" text-anchor="end">μ</text>
+      <text x="34" y="222" text-anchor="end">0</text>
+    </g>
+
+    <line x1="40" y1="110" x2="740" y2="110" stroke="#F59E0B" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.6"/>
+    <text x="744" y="113" class="mono amb" font-size="8">anom</text>
+
+    <!--BARS:BEGIN-->
+    <g id="tel-bars">
+      <g style="transform-origin: 55px 220px" class="bar" transform="translate(46 0)"><rect width="18" height="27" y="193" fill="#38BDF8" opacity="0.56"/></g>
+      <g style="transform-origin: 77px 220px" class="bar" transform="translate(68 0)"><rect width="18" height="45" y="175" fill="#38BDF8" opacity="0.61"/></g>
+      <g style="transform-origin: 99px 220px" class="bar" transform="translate(90 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 121px 220px" class="bar" transform="translate(112 0)"><rect width="18" height="72" y="148" fill="#38BDF8" opacity="0.67"/></g>
+      <g style="transform-origin: 143px 220px" class="bar" transform="translate(134 0)"><rect width="18" height="36" y="184" fill="#38BDF8" opacity="0.58"/></g>
+      <g style="transform-origin: 165px 220px" class="bar" transform="translate(156 0)"><rect width="18" height="81" y="139" fill="#38BDF8" opacity="0.69"/></g>
+      <g style="transform-origin: 187px 220px" class="bar" transform="translate(178 0)"><rect width="18" height="152" y="68" fill="#F59E0B" opacity="1"/></g>
+      <g style="transform-origin: 209px 220px" class="bar" transform="translate(200 0)"><rect width="18" height="45" y="175" fill="#38BDF8" opacity="0.61"/></g>
+      <g style="transform-origin: 231px 220px" class="bar" transform="translate(222 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 253px 220px" class="bar" transform="translate(244 0)"><rect width="18" height="9" y="211" fill="#38BDF8" opacity="0.52"/></g>
+      <g style="transform-origin: 275px 220px" class="bar" transform="translate(266 0)"><rect width="18" height="63" y="157" fill="#38BDF8" opacity="0.65"/></g>
+      <g style="transform-origin: 297px 220px" class="bar" transform="translate(288 0)"><rect width="18" height="98" y="122" fill="#38BDF8" opacity="0.73"/></g>
+      <g style="transform-origin: 319px 220px" class="bar" transform="translate(310 0)"><rect width="18" height="54" y="166" fill="#38BDF8" opacity="0.63"/></g>
+      <g style="transform-origin: 341px 220px" class="bar" transform="translate(332 0)"><rect width="18" height="27" y="193" fill="#38BDF8" opacity="0.56"/></g>
+      <g style="transform-origin: 363px 220px" class="bar" transform="translate(354 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 385px 220px" class="bar" transform="translate(376 0)"><rect width="18" height="18" y="202" fill="#38BDF8" opacity="0.54"/></g>
+      <g style="transform-origin: 407px 220px" class="bar" transform="translate(398 0)"><rect width="18" height="63" y="157" fill="#38BDF8" opacity="0.65"/></g>
+      <g style="transform-origin: 429px 220px" class="bar" transform="translate(420 0)"><rect width="18" height="81" y="139" fill="#38BDF8" opacity="0.69"/></g>
+      <g style="transform-origin: 451px 220px" class="bar" transform="translate(442 0)"><rect width="18" height="170" y="50" fill="#F59E0B" opacity="1"/></g>
+      <g style="transform-origin: 473px 220px" class="bar" transform="translate(464 0)"><rect width="18" height="36" y="184" fill="#38BDF8" opacity="0.58"/></g>
+      <g style="transform-origin: 495px 220px" class="bar" transform="translate(486 0)"><rect width="18" height="18" y="202" fill="#38BDF8" opacity="0.54"/></g>
+      <g style="transform-origin: 517px 220px" class="bar" transform="translate(508 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 539px 220px" class="bar" transform="translate(530 0)"><rect width="18" height="9" y="211" fill="#38BDF8" opacity="0.52"/></g>
+      <g style="transform-origin: 561px 220px" class="bar" transform="translate(552 0)"><rect width="18" height="72" y="148" fill="#38BDF8" opacity="0.67"/></g>
+      <g style="transform-origin: 583px 220px" class="bar" transform="translate(574 0)"><rect width="18" height="107" y="113" fill="#38BDF8" opacity="0.75"/></g>
+      <g style="transform-origin: 605px 220px" class="bar" transform="translate(596 0)"><rect width="18" height="45" y="175" fill="#38BDF8" opacity="0.61"/></g>
+      <g style="transform-origin: 627px 220px" class="bar" transform="translate(618 0)"><rect width="18" height="63" y="157" fill="#38BDF8" opacity="0.65"/></g>
+      <g style="transform-origin: 649px 220px" class="bar" transform="translate(640 0)"><rect width="18" height="36" y="184" fill="#38BDF8" opacity="0.58"/></g>
+      <g style="transform-origin: 671px 220px" class="bar" transform="translate(662 0)"><rect width="18" height="0" y="220" fill="#6E7681" opacity="0.3"/></g>
+      <g style="transform-origin: 693px 220px" class="bar" transform="translate(684 0)"><rect width="18" height="89" y="131" fill="#38BDF8" opacity="0.71"/></g>
+    </g>
+    <!--BARS:END-->
+
+    <text x="46"  y="234" class="mono dim" font-size="8" letter-spacing="2">-30d</text>
+    <text x="380" y="234" class="mono dim" font-size="8" text-anchor="middle" letter-spacing="2">-15d</text>
+    <text x="704" y="234" class="mono dim" font-size="8" text-anchor="end" letter-spacing="2">today</text>
+  </g>
+
+  <!-- ===== LANGUAGE BREAKDOWN ===== -->
+  <g transform="translate(810 120)">
+    <rect width="358" height="240" fill="#0B0F14" stroke="#21262D"/>
+    <text x="14" y="22" class="mono dim" font-size="10" letter-spacing="3">CH-02 · LANG BREAKDOWN</text>
+
+    <!--LANGS:BEGIN-->
+    <g id="tel-langs" class="mono" font-size="10" transform="translate(14 44)">
+      <g transform="translate(0 0)">
+        <text class="text">Python</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l1-pct">38.2%</text>
+        <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="126"  height="6" fill="#38BDF8" id="tel-l1-bar" opacity="1.00"/>
+      </g>
+      <g transform="translate(0 30)">
+        <text class="text">TypeScript</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l2-pct">27.6%</text>
+        <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="91"  height="6" fill="#38BDF8" id="tel-l2-bar" opacity="0.85"/>
+      </g>
+      <g transform="translate(0 60)">
+        <text class="text">Jupyter Notebook</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l3-pct">18.1%</text>
+        <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="60"  height="6" fill="#38BDF8" id="tel-l3-bar" opacity="0.70"/>
+      </g>
+      <g transform="translate(0 90)">
+        <text class="text">C++</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l4-pct">9.4%</text>
+        <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="31"  height="6" fill="#38BDF8" id="tel-l4-bar" opacity="0.55"/>
+      </g>
+      <g transform="translate(0 120)">
+        <text class="text">Other</text>
+        <text x="344" y="0" text-anchor="end" class="cyan" id="tel-l5-pct">6.7%</text>
+        <rect x="0"  y="6" width="330" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="22"  height="6" fill="#38BDF8" id="tel-l5-bar" opacity="0.40"/>
+      </g>
+    </g>
+    <!--LANGS:END-->
+
+    <g transform="translate(14 196)">
+      <text class="mono dim" font-size="9" letter-spacing="2">REPOS · STARS · TOTAL CMTS</text>
+      <g transform="translate(0 18)" class="mono">
+        <text class="ttl" font-size="22" font-weight="700" id="tel-stat-repos">--</text>
+        <text x="110" class="ttl" font-size="22" font-weight="700" id="tel-stat-stars">--</text>
+        <text x="220" class="ttl" font-size="22" font-weight="700" id="tel-stat-commits">--</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== AUDIT LOG ===== -->
+  <g transform="translate(32 376)">
+    <rect width="1136" height="120" fill="#0B0F14" stroke="#21262D"/>
+    <text x="14" y="22" class="mono dim" font-size="10" letter-spacing="3">CH-03 · AUDIT LOG · LATEST PUSHES</text>
+
+    <g class="mono" font-size="10" transform="translate(14 42)">
+      <g>
+        <text class="amb" id="tel-log-t1">--:--</text>
+        <text x="56"  class="cyan" id="tel-log-s1">-------</text>
+        <text x="128" class="dim">·</text>
+        <text x="140" class="text" id="tel-log-r1">awaiting first telemetry tick</text>
+        <text x="500" class="dim">·</text>
+        <text x="512" class="soft" id="tel-log-m1">action will populate this on first run</text>
+      </g>
+      <g transform="translate(0 16)">
+        <text class="amb" id="tel-log-t2">--:--</text>
+        <text x="56"  class="cyan" id="tel-log-s2">-------</text>
+        <text x="128" class="dim">·</text>
+        <text x="140" class="text" id="tel-log-r2">--</text>
+        <text x="500" class="dim">·</text>
+        <text x="512" class="soft" id="tel-log-m2">--</text>
+      </g>
+      <g transform="translate(0 32)">
+        <text class="amb" id="tel-log-t3">--:--</text>
+        <text x="56"  class="cyan" id="tel-log-s3">-------</text>
+        <text x="128" class="dim">·</text>
+        <text x="140" class="text" id="tel-log-r3">--</text>
+        <text x="500" class="dim">·</text>
+        <text x="512" class="soft" id="tel-log-m3">--</text>
+      </g>
+      <g transform="translate(0 48)">
+        <text class="amb" id="tel-log-t4">--:--</text>
+        <text x="56"  class="cyan" id="tel-log-s4">-------</text>
+        <text x="128" class="dim">·</text>
+        <text x="140" class="text" id="tel-log-r4">--</text>
+        <text x="500" class="dim">·</text>
+        <text x="512" class="soft" id="tel-log-m4">--</text>
+      </g>
+      <g transform="translate(0 64)">
+        <text class="amb" id="tel-log-t5">--:--</text>
+        <text x="56"  class="cyan" id="tel-log-s5">-------</text>
+        <text x="128" class="dim">·</text>
+        <text x="140" class="text" id="tel-log-r5">--</text>
+        <text x="500" class="dim">·</text>
+        <text x="512" class="soft" id="tel-log-m5">--</text>
+      </g>
+    </g>
+  </g>
+
+  <rect x="20" y="-10" width="1160" height="2" fill="url(#cyanGlow2)" opacity="0.45" class="scan"/>
+</svg>

@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="Mission Control HUD for Yash Chauhan">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#010409"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#38BDF8" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="ledGreen" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset="0.7" stop-color="#10B981" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#161B22" stroke-width="0.5"/>
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Inter, sans-serif; }
+      .dim  { fill: #6E7681; }
+      .soft { fill: #8B949E; }
+      .text { fill: #C9D1D9; }
+      .cyan { fill: #38BDF8; }
+      .amb  { fill: #F59E0B; }
+      .grn  { fill: #10B981; }
+      .red  { fill: #F87171; }
+      .ttl  { fill: #F0F6FC; }
+      .blink { animation: blink 1.4s ease-in-out infinite; }
+      .pulse { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .scan { animation: scan 6s linear infinite; }
+      .flicker { animation: flicker 4s steps(1) infinite; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+      @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.45); opacity: 0.55; } }
+      @keyframes scan  { 0% { transform: translateY(-20px); opacity: 0; } 8% { opacity: 0.7; } 92% { opacity: 0.7; } 100% { transform: translateY(360px); opacity: 0; } }
+      @keyframes flicker { 0%, 96%, 100% { opacity: 1; } 97% { opacity: 0.4; } 98% { opacity: 1; } 99% { opacity: 0.7; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <rect width="1200" height="340" fill="url(#grid)"/>
+
+  <!-- corner brackets -->
+  <g stroke="#38BDF8" stroke-width="1.5" fill="none">
+    <path d="M 14 14 L 14 44 M 14 14 L 44 14"/>
+    <path d="M 1186 14 L 1186 44 M 1186 14 L 1156 14"/>
+    <path d="M 14 326 L 14 296 M 14 326 L 44 326"/>
+    <path d="M 1186 326 L 1186 296 M 1186 326 L 1156 326"/>
+  </g>
+
+  <!-- top status strip -->
+  <rect x="20" y="22" width="1160" height="26" fill="#0B0F14" stroke="#161B22"/>
+  <text x="34" y="40" class="mono" font-size="11" letter-spacing="3">
+    <tspan class="cyan">HOUSTON</tspan>
+    <tspan class="dim"> // </tspan>
+    <tspan class="soft">MISSION CONTROL</tspan>
+    <tspan class="dim"> // </tspan>
+    <tspan class="soft">LINK ESTABLISHED</tspan>
+    <tspan class="dim"> // </tspan>
+    <tspan class="grn">CARRIER LOCKED</tspan>
+  </text>
+  <g transform="translate(940 35)">
+    <circle r="3" class="grn pulse"/>
+    <text x="10" y="4" class="mono" font-size="11" letter-spacing="2">
+      <tspan class="grn">REC</tspan>
+      <tspan class="dim"> · </tspan>
+      <tspan class="text">FRAME 042-A</tspan>
+      <tspan class="dim"> · </tspan>
+      <tspan class="amb">UPLINK 12.4 kbps</tspan>
+    </text>
+  </g>
+
+  <!-- left identifier block -->
+  <g transform="translate(40 78)">
+    <rect width="200" height="200" fill="#0B0F14" stroke="#1F2937"/>
+    <text x="14" y="20" class="mono dim" font-size="9" letter-spacing="2">CREW ID // 01</text>
+    <text x="14" y="48" class="sans ttl" font-size="22" font-weight="700">CHAUHAN, Y.</text>
+    <text x="14" y="66" class="mono soft" font-size="10">callsign: y-vks</text>
+
+    <line x1="14" y1="78" x2="186" y2="78" stroke="#1F2937"/>
+
+    <text x="14" y="98"  class="mono dim"  font-size="9"  letter-spacing="2">SPECIALIZATION</text>
+    <text x="14" y="114" class="mono text" font-size="11">AI / ML systems</text>
+    <text x="14" y="130" class="mono soft" font-size="10">observability · safety</text>
+
+    <text x="14" y="154" class="mono dim"  font-size="9"  letter-spacing="2">AFFILIATION</text>
+    <text x="14" y="170" class="mono text" font-size="11">SRM IST · IIT-M (R)</text>
+    <text x="14" y="184" class="mono soft" font-size="10">B.Tech CSE · AI/ML</text>
+  </g>
+
+  <!-- center hero block -->
+  <g transform="translate(260 78)">
+    <text x="0" y="22" class="mono cyan" font-size="11" letter-spacing="6">[ MISSION  yash-01 ]</text>
+    <text x="0" y="78" class="sans ttl" font-size="62" font-weight="800" letter-spacing="-1">YASH CHAUHAN</text>
+    <text x="0" y="106" class="sans soft" font-size="15" letter-spacing="1">turning model demos into inspectable systems.</text>
+
+    <!-- divider with cyan sweep -->
+    <line x1="0" y1="124" x2="700" y2="124" stroke="#1F2937"/>
+    <rect x="0" y="123" width="220" height="2" fill="url(#cyanGlow)" class="flicker"/>
+
+    <!-- status row -->
+    <g transform="translate(0 152)" class="mono" font-size="11">
+      <g>
+        <text class="dim" letter-spacing="2">STATUS</text>
+        <g transform="translate(60 -4)">
+          <circle r="6" fill="url(#ledGreen)"/>
+          <circle r="2.4" class="grn pulse"/>
+        </g>
+        <text x="78" y="0" class="grn" letter-spacing="2">NOMINAL</text>
+      </g>
+      <g transform="translate(220 0)">
+        <text class="dim" letter-spacing="2">T+</text>
+        <text x="22" y="0" class="text" id="hud-elapsed">2y 9m 25d</text>
+      </g>
+      <g transform="translate(420 0)">
+        <text class="dim" letter-spacing="2">PHASE</text>
+        <text x="52" y="0" class="amb">RESEARCH · BURN 03</text>
+      </g>
+    </g>
+
+    <g transform="translate(0 178)" class="mono" font-size="11">
+      <text class="dim" letter-spacing="2">PAYLOAD</text>
+      <text x="62" y="0" class="text">4 active</text>
+      <text x="132" y="0" class="dim">·</text>
+      <text x="148" y="0" class="text"><tspan id="hud-commits">--</tspan> commits / 30d</text>
+      <text x="340" y="0" class="dim">·</text>
+      <text x="356" y="0" class="text">last push <tspan class="cyan" id="hud-lastpush">polling</tspan></text>
+    </g>
+
+    <!-- mini telemetry strip -->
+    <g transform="translate(0 200)" class="mono" font-size="9">
+      <g>
+        <text class="dim" letter-spacing="2">FUEL</text>
+        <rect x="0"  y="6" width="120" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="92"  height="6" class="cyan" fill="#38BDF8"/>
+        <text x="128" y="12" class="cyan">77%</text>
+      </g>
+      <g transform="translate(180 0)">
+        <text class="dim" letter-spacing="2">PWR</text>
+        <rect x="0"  y="6" width="120" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="120" height="6" fill="#10B981"/>
+        <text x="128" y="12" class="grn">100%</text>
+      </g>
+      <g transform="translate(360 0)">
+        <text class="dim" letter-spacing="2">NET</text>
+        <rect x="0"  y="6" width="120" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="118" height="6" fill="#10B981"/>
+        <text x="128" y="12" class="grn">99%</text>
+      </g>
+      <g transform="translate(540 0)">
+        <text class="dim" letter-spacing="2">CAF</text>
+        <rect x="0"  y="6" width="120" height="6" fill="#0B0F14" stroke="#1F2937"/>
+        <rect x="0"  y="6" width="119" height="6" fill="#F59E0B"/>
+        <text x="128" y="12" class="amb">99.7% SLA</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- right systems panel -->
+  <g transform="translate(990 78)">
+    <rect width="180" height="200" fill="#0B0F14" stroke="#1F2937"/>
+    <text x="12" y="20" class="mono dim" font-size="9" letter-spacing="2">SUBSYSTEMS</text>
+
+    <g class="mono" font-size="10" transform="translate(12 38)">
+      <g><circle cx="4"  cy="-4" r="3" class="grn"/><text x="14" y="0" class="text">research-engine</text><text x="166" y="0" text-anchor="end" class="grn">OK</text></g>
+      <g transform="translate(0 18)"><circle cx="4" cy="-4" r="3" class="grn"/><text x="14" y="0" class="text">ml-pipeline</text><text x="166" y="0" text-anchor="end" class="grn">OK</text></g>
+      <g transform="translate(0 36)"><circle cx="4" cy="-4" r="3" class="grn"/><text x="14" y="0" class="text">audit-bus</text><text x="166" y="0" text-anchor="end" class="grn">OK</text></g>
+      <g transform="translate(0 54)"><circle cx="4" cy="-4" r="3" class="amb blink"/><text x="14" y="0" class="text">sleep-cycle</text><text x="166" y="0" text-anchor="end" class="amb">DEG</text></g>
+      <g transform="translate(0 72)"><circle cx="4" cy="-4" r="3" class="grn"/><text x="14" y="0" class="text">refusal-router</text><text x="166" y="0" text-anchor="end" class="grn">OK</text></g>
+      <g transform="translate(0 90)"><circle cx="4" cy="-4" r="3" class="grn"/><text x="14" y="0" class="text">chaos-engine</text><text x="166" y="0" text-anchor="end" class="grn">ARMED</text></g>
+      <g transform="translate(0 108)"><circle cx="4" cy="-4" r="3" class="grn"/><text x="14" y="0" class="text">watchdog</text><text x="166" y="0" text-anchor="end" class="grn">30s</text></g>
+    </g>
+
+    <line x1="12" y1="158" x2="168" y2="158" stroke="#1F2937"/>
+    <text x="12" y="174" class="mono dim" font-size="9" letter-spacing="2">ALERTS</text>
+    <text x="12" y="190" class="mono amb" font-size="10">0 active · 2 muted</text>
+  </g>
+
+  <!-- moving scanline -->
+  <rect x="20" y="-20" width="1160" height="2" fill="url(#cyanGlow)" opacity="0.45" class="scan"/>
+
+  <!-- bottom strip -->
+  <rect x="20" y="292" width="1160" height="26" fill="#0B0F14" stroke="#161B22"/>
+  <text x="34" y="310" class="mono" font-size="10" letter-spacing="2">
+    <tspan class="dim">COMMS</tspan>
+    <tspan class="text"> linkedin/yash-vks-chauhan </tspan>
+    <tspan class="dim">·</tspan>
+    <tspan class="text"> github/yash-vks-chauhan </tspan>
+    <tspan class="dim">·</tspan>
+    <tspan class="text"> mail/yash.vks.chauhan@gmail.com </tspan>
+    <tspan class="dim">·</tspan>
+    <tspan class="amb"> phone/+91 8208 9529 85</tspan>
+  </text>
+  <text x="1166" y="310" text-anchor="end" class="mono soft" font-size="10" letter-spacing="2">CHENNAI · IN</text>
+</svg>

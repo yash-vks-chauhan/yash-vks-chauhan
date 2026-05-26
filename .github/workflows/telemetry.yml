@@ -1,0 +1,46 @@
+name: telemetry
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"   # every 6 hours, at :23 past the hour
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/update_telemetry.py"
+      - ".github/workflows/telemetry.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telemetry
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: regenerate telemetry SVGs
+        env:
+          GH_USER: yash-vks-chauhan
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/update_telemetry.py
+
+      - name: commit if changed
+        run: |
+          git config user.name  "mission-control[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- assets/; then
+            echo "no telemetry delta"
+            exit 0
+          fi
+          git add assets/
+          git commit -m "telemetry: refresh $(date -u +'%Y-%m-%d %H:%MZ')"
+          git push
