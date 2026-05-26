@@ -1,0 +1,415 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Pre-flight skill checklist">
+  <defs>
+    <linearGradient id="bgF" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#010409"/>
+    </linearGradient>
+    <radialGradient id="ledGr" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ledAr" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ledCr" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ledDr" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6E7681"/><stop offset="1" stop-color="#6E7681" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridF" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#161B22" stroke-width="0.5"/>
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Inter, sans-serif; }
+      .dim { fill: #6E7681; } .soft { fill: #8B949E; } .text { fill: #C9D1D9; } .ttl { fill: #F0F6FC; }
+      .cyan { fill: #38BDF8; } .amb { fill: #F59E0B; } .grn { fill: #10B981; } .red { fill: #F87171; }
+      .scyan { stroke: #38BDF8; } .samb { stroke: #F59E0B; } .sgrn { stroke: #10B981; } .sdim { stroke: #1F2937; }
+
+      .row     { animation: ignite 0.35s ease-out backwards; }
+      .pulseS  { animation: pulseS 2.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .pulseA  { animation: pulseS 2.0s ease-in-out infinite 0.3s; transform-origin: center; transform-box: fill-box; }
+      .pulseQ  { animation: pulseQ 1.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .fillSlow{ animation: fill 1.6s ease-out backwards; transform-origin: left; transform-box: fill-box; }
+      .scan    { animation: scanF 9s linear infinite; }
+      .flicker { animation: flicker 5s steps(1) infinite; }
+      @keyframes ignite  { 0% { opacity: 0; transform: translateX(-6px); } 100% { opacity: 1; transform: translateX(0); } }
+      @keyframes pulseS  { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.45; } }
+      @keyframes pulseQ  { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+      @keyframes fill    { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+      @keyframes scanF   { 0% { transform: translateY(-10px); opacity: 0; } 8% { opacity: 0.55; } 92% { opacity: 0.55; } 100% { transform: translateY(770px); opacity: 0; } }
+      @keyframes flicker { 0%, 96%, 100% { opacity: 1; } 97% { opacity: 0.45; } 98% { opacity: 1; } 99% { opacity: 0.7; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bgF)"/>
+  <rect width="1200" height="760" fill="url(#gridF)"/>
+
+  <g stroke="#38BDF8" stroke-width="1.5" fill="none">
+    <path d="M 14 14 L 14 44 M 14 14 L 44 14"/>
+    <path d="M 1186 14 L 1186 44 M 1186 14 L 1156 14"/>
+    <path d="M 14 746 L 14 716 M 14 746 L 44 746"/>
+    <path d="M 1186 746 L 1186 716 M 1186 746 L 1156 746"/>
+  </g>
+
+  <!-- TITLE STRIP -->
+  <text x="32" y="42" class="mono cyan" font-size="11" letter-spacing="6">[ PRE-FLIGHT CHECKLIST ]</text>
+  <text x="32" y="68" class="sans ttl"  font-size="22" font-weight="700">SKILL MATRIX · ignition sequence engaged</text>
+  <text x="32" y="86" class="mono soft" font-size="11">each row armed by mission usage · <tspan class="cyan">cyan</tspan> flight-rated · <tspan class="amb">amber</tspan> arming · <tspan class="dim">grey</tspan> on manifest</text>
+
+  <!-- aggregate counters · top right -->
+  <g transform="translate(720 42)" class="mono">
+    <g><circle cx="0" cy="0" r="4" class="cyan pulseS"/><text x="12" y="4" font-size="11" letter-spacing="2"><tspan class="cyan">22</tspan><tspan class="dim"> flight-rated</tspan></text></g>
+    <g transform="translate(150 0)"><circle cx="0" cy="0" r="4" class="amb pulseA"/><text x="12" y="4" font-size="11" letter-spacing="2"><tspan class="amb">4</tspan><tspan class="dim"> arming</tspan></text></g>
+    <g transform="translate(250 0)"><circle cx="0" cy="0" r="4" class="dim pulseQ"/><text x="12" y="4" font-size="11" letter-spacing="2"><tspan class="dim">3</tspan><tspan class="dim"> on manifest</tspan></text></g>
+    <g transform="translate(370 0)"><text font-size="11" letter-spacing="3" text-anchor="end" x="64" y="4"><tspan class="dim">CHECK </tspan><tspan class="grn">OK</tspan></text></g>
+  </g>
+
+  <!-- ============ COLUMN 1 · LANGUAGES & CORE ============ -->
+  <g transform="translate(32 120)">
+    <rect width="370" height="500" fill="#0B0F14" stroke="#21262D"/>
+    <rect x="0" y="0" width="370" height="3" fill="#38BDF8" class="flicker"/>
+    <text x="14" y="22" class="mono cyan" font-size="10" letter-spacing="3">CH-01 · LANGUAGES &amp; CORE</text>
+    <text x="356" y="22" text-anchor="end" class="mono dim" font-size="9" letter-spacing="2">9 rows</text>
+
+    <!-- header row -->
+    <g transform="translate(14 42)" class="mono dim" font-size="8" letter-spacing="2">
+      <text>SYS</text><text x="40">SKILL</text><text x="170">PROFICIENCY</text><text x="290">MISSIONS</text>
+    </g>
+    <line x1="14" y1="48" x2="356" y2="48" class="sdim"/>
+
+    <!-- rows: y-step 44 -->
+    <g transform="translate(14 70)" class="row" style="animation-delay: 0.1s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">Python</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">7</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="96" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.1s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Pandas · NumPy · SciPy · TF · Keras · PyTorch</text>
+    </g>
+
+    <g transform="translate(14 116)" class="row" style="animation-delay: 0.18s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">TypeScript</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">3</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="78" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.18s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Next.js · React · React Native · Expo</text>
+    </g>
+
+    <g transform="translate(14 162)" class="row" style="animation-delay: 0.26s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">SQL</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">3</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="72" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.26s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">PostgreSQL · Prisma · Firebase</text>
+    </g>
+
+    <g transform="translate(14 208)" class="row" style="animation-delay: 0.34s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">C++</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="58" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.34s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">DSA · OOP · CompOrg coursework</text>
+    </g>
+
+    <g transform="translate(14 254)" class="row" style="animation-delay: 0.42s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">git</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">all</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="100" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.42s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">workflows · github actions · CI</text>
+    </g>
+
+    <g transform="translate(14 300)" class="row" style="animation-delay: 0.50s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">linux · shell</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">all</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="84" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.50s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">bash / zsh · automation · scripting</text>
+    </g>
+
+    <g transform="translate(14 346)" class="row" style="animation-delay: 0.58s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">docker</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">3</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="74" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.58s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Kind cluster · compose · containerization</text>
+    </g>
+
+    <g transform="translate(14 392)" class="row" style="animation-delay: 0.66s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">DSA · OS · COA</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">core</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="80" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.66s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">undergrad coursework · still sharpening</text>
+    </g>
+
+    <g transform="translate(14 438)" class="row" style="animation-delay: 0.74s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledAr)"/><circle cx="6" cy="-4" r="2.4" class="amb pulseA"/>
+      <text x="20" y="0" class="mono text" font-size="11">Rust</text>
+      <text x="290" y="0" class="mono amb" font-size="11" font-weight="700">arming</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="22" height="4" fill="#F59E0B" class="fillSlow" style="animation-delay: 0.74s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">personal-time burn · ownership / borrow</text>
+    </g>
+
+    <text x="14" y="488" class="mono dim" font-size="8" letter-spacing="2">// 7 / 9 ARMED · 1 ARMING · all critical paths green</text>
+  </g>
+
+  <!-- ============ COLUMN 2 · ML / DL ============ -->
+  <g transform="translate(415 120)">
+    <rect width="370" height="500" fill="#0B0F14" stroke="#21262D"/>
+    <rect x="0" y="0" width="370" height="3" fill="#38BDF8" class="flicker"/>
+    <text x="14" y="22" class="mono cyan" font-size="10" letter-spacing="3">CH-02 · ML / DL · MODEL CRAFT</text>
+    <text x="356" y="22" text-anchor="end" class="mono dim" font-size="9" letter-spacing="2">10 rows</text>
+
+    <g transform="translate(14 42)" class="mono dim" font-size="8" letter-spacing="2">
+      <text>SYS</text><text x="40">SKILL</text><text x="170">PROFICIENCY</text><text x="290">MISSIONS</text>
+    </g>
+    <line x1="14" y1="48" x2="356" y2="48" class="sdim"/>
+
+    <g transform="translate(14 70)" class="row" style="animation-delay: 0.12s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">scikit-learn</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">5</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="90" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.12s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Random Forest · IsolationForest · pipelines</text>
+    </g>
+
+    <g transform="translate(14 116)" class="row" style="animation-delay: 0.20s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">XGBoost + SHAP</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">2</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="88" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.20s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">IIT EMS regression · WMAPE 8.37%</text>
+    </g>
+
+    <g transform="translate(14 162)" class="row" style="animation-delay: 0.28s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">TensorFlow / Keras</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">3</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="84" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.28s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">U-Net · fraud DNN · mixed-precision AMP</text>
+    </g>
+
+    <g transform="translate(14 208)" class="row" style="animation-delay: 0.36s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">PyTorch</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="58" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.36s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">research prototypes · ramping</text>
+    </g>
+
+    <g transform="translate(14 254)" class="row" style="animation-delay: 0.44s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">anomaly detection</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">4</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="92" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.44s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">autoencoder · LSTM-AE · stat tests</text>
+    </g>
+
+    <g transform="translate(14 300)" class="row" style="animation-delay: 0.52s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">computer vision</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">2</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="76" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.52s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">OpenCV · scikit-image · CLAHE</text>
+    </g>
+
+    <g transform="translate(14 346)" class="row" style="animation-delay: 0.60s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">time-series (ARIMA)</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="64" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.60s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Hindalco PdM · sensor streams</text>
+    </g>
+
+    <g transform="translate(14 392)" class="row" style="animation-delay: 0.68s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">medical imaging</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="70" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.68s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">lung CT · PSNR / SSIM / MSE</text>
+    </g>
+
+    <g transform="translate(14 438)" class="row" style="animation-delay: 0.76s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledAr)"/><circle cx="6" cy="-4" r="2.4" class="amb pulseA"/>
+      <text x="20" y="0" class="mono text" font-size="11">diffusion · GANs</text>
+      <text x="290" y="0" class="mono amb" font-size="11" font-weight="700">arming</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="30" height="4" fill="#F59E0B" class="fillSlow" style="animation-delay: 0.76s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">CT roadmap · denoise via diffusion</text>
+    </g>
+
+    <g transform="translate(14 484)" class="row" style="animation-delay: 0.84s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledAr)"/><circle cx="6" cy="-4" r="2.4" class="amb pulseA"/>
+      <text x="20" y="0" class="mono text" font-size="11">LLM eval / safety</text>
+      <text x="290" y="0" class="mono amb" font-size="11" font-weight="700">arming</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="40" height="4" fill="#F59E0B" class="fillSlow" style="animation-delay: 0.84s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Glassbox · groundedness / refusal recall</text>
+    </g>
+  </g>
+
+  <!-- ============ COLUMN 3 · SYSTEMS / PRODUCT ============ -->
+  <g transform="translate(798 120)">
+    <rect width="370" height="500" fill="#0B0F14" stroke="#21262D"/>
+    <rect x="0" y="0" width="370" height="3" fill="#38BDF8" class="flicker"/>
+    <text x="14" y="22" class="mono cyan" font-size="10" letter-spacing="3">CH-03 · SYSTEMS &amp; PRODUCT</text>
+    <text x="356" y="22" text-anchor="end" class="mono dim" font-size="9" letter-spacing="2">10 rows</text>
+
+    <g transform="translate(14 42)" class="mono dim" font-size="8" letter-spacing="2">
+      <text>SYS</text><text x="40">SKILL</text><text x="170">PROFICIENCY</text><text x="290">MISSIONS</text>
+    </g>
+    <line x1="14" y1="48" x2="356" y2="48" class="sdim"/>
+
+    <g transform="translate(14 70)" class="row" style="animation-delay: 0.14s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">Next.js · React</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">2</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="86" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.14s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">App Router · RSC · auth + RBAC</text>
+    </g>
+
+    <g transform="translate(14 116)" class="row" style="animation-delay: 0.22s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">FastAPI</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="72" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.22s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Glassbox API · pydantic schemas</text>
+    </g>
+
+    <g transform="translate(14 162)" class="row" style="animation-delay: 0.30s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">React Native · Expo</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="60" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.30s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">mobile ticketing app · SQL · auth</text>
+    </g>
+
+    <g transform="translate(14 208)" class="row" style="animation-delay: 0.38s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">PostgreSQL + Prisma</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="74" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.38s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Kalakraft schema · migrations · seeds</text>
+    </g>
+
+    <g transform="translate(14 254)" class="row" style="animation-delay: 0.46s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">Kubernetes</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="68" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.46s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">Autoscaler · 3-node Kind from day 1</text>
+    </g>
+
+    <g transform="translate(14 300)" class="row" style="animation-delay: 0.54s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">Prometheus</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="70" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.54s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">metrics + PromQL · TimescaleDB pipeline</text>
+    </g>
+
+    <g transform="translate(14 346)" class="row" style="animation-delay: 0.62s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">Pusher · WebSockets</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="60" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.62s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">real-time order + stock alerts</text>
+    </g>
+
+    <g transform="translate(14 392)" class="row" style="animation-delay: 0.70s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledCr)"/><circle cx="6" cy="-4" r="2.4" class="cyan pulseS"/>
+      <text x="20" y="0" class="mono text" font-size="11">Cloudinary · Sharp</text>
+      <text x="290" y="0" class="mono cyan" font-size="11" font-weight="700">1</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="64" height="4" fill="#38BDF8" class="fillSlow" style="animation-delay: 0.70s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">image / video pipeline · CWV gains</text>
+    </g>
+
+    <g transform="translate(14 438)" class="row" style="animation-delay: 0.78s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledDr)"/><circle cx="6" cy="-4" r="2.4" class="dim pulseQ"/>
+      <text x="20" y="0" class="mono text" font-size="11">Terraform</text>
+      <text x="290" y="0" class="mono dim" font-size="11" font-weight="700">queued</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="14" height="4" fill="#6E7681" class="fillSlow" style="animation-delay: 0.78s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">next-quarter manifest</text>
+    </g>
+
+    <g transform="translate(14 484)" class="row" style="animation-delay: 0.86s">
+      <circle cx="6" cy="-4" r="5" fill="url(#ledDr)"/><circle cx="6" cy="-4" r="2.4" class="dim pulseQ"/>
+      <text x="20" y="0" class="mono text" font-size="11">gRPC · Kafka</text>
+      <text x="290" y="0" class="mono dim" font-size="11" font-weight="700">queued</text>
+      <rect x="170" y="-4" width="100" height="4" fill="#0B0F14" stroke="#1F2937"/>
+      <rect x="170" y="-4" width="10" height="4" fill="#6E7681" class="fillSlow" style="animation-delay: 0.86s"/>
+      <text x="20" y="14" class="mono soft" font-size="8">stream backbones · on the manifest</text>
+    </g>
+  </g>
+
+  <!-- ============ CERTIFICATIONS STRIP ============ -->
+  <g transform="translate(32 640)">
+    <rect width="1136" height="80" fill="#0B0F14" stroke="#21262D"/>
+    <text x="14" y="22" class="mono cyan" font-size="10" letter-spacing="3">CH-04 · CERTIFICATIONS · GROUND SCHOOL ARMED</text>
+    <text x="1122" y="22" text-anchor="end" class="mono dim" font-size="9" letter-spacing="2">6 certs · 12 modules · 2023 – present</text>
+
+    <!-- cert pills -->
+    <g transform="translate(14 44)">
+      <g>
+        <rect width="200" height="22" rx="3" fill="#161B22" stroke="#10B981"/>
+        <circle cx="14" cy="11" r="3" class="grn pulseS"/>
+        <text x="24" y="15" class="mono grn" font-size="10" letter-spacing="2">AWS CLOUD PRACTITIONER</text>
+      </g>
+      <g transform="translate(212 0)">
+        <rect width="218" height="22" rx="3" fill="#161B22" stroke="#F59E0B"/>
+        <circle cx="14" cy="11" r="3" class="amb pulseA"/>
+        <text x="24" y="15" class="mono amb" font-size="10" letter-spacing="2">AWS ML SPECIALTY · ARMED</text>
+      </g>
+      <g transform="translate(442 0)">
+        <rect width="184" height="22" rx="3" fill="#161B22" stroke="#10B981"/>
+        <circle cx="14" cy="11" r="3" class="grn pulseS"/>
+        <text x="24" y="15" class="mono grn" font-size="10" letter-spacing="2">DL.AI · DEEP LEARNING</text>
+      </g>
+      <g transform="translate(638 0)">
+        <rect width="192" height="22" rx="3" fill="#161B22" stroke="#10B981"/>
+        <circle cx="14" cy="11" r="3" class="grn pulseS"/>
+        <text x="24" y="15" class="mono grn" font-size="10" letter-spacing="2">DL.AI · MACHINE LEARNING</text>
+      </g>
+      <g transform="translate(842 0)">
+        <rect width="170" height="22" rx="3" fill="#161B22" stroke="#10B981"/>
+        <circle cx="14" cy="11" r="3" class="grn pulseS"/>
+        <text x="24" y="15" class="mono grn" font-size="10" letter-spacing="2">DL.AI · MATH FOR ML</text>
+      </g>
+      <g transform="translate(1024 0)">
+        <rect width="84" height="22" rx="3" fill="#161B22" stroke="#10B981"/>
+        <circle cx="14" cy="11" r="3" class="grn pulseS"/>
+        <text x="24" y="15" class="mono grn" font-size="10" letter-spacing="2">MATLAB ×4</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- scanline -->
+  <rect x="20" y="-10" width="1160" height="2" fill="#38BDF8" opacity="0.4" class="scan"/>
+</svg>

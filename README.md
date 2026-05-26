@@ -70,54 +70,74 @@ every milestone is a **burn** — a controlled change in heading. burn 06 (IIT M
 
 ## ► PRE-FLIGHT CHECKLIST
 
-`☑` = flight-rated · `◧` = arming · `☐` = on the manifest, not yet flown
+every skill armed by **mission usage**. the `MISSIONS` column counts how many shipped projects actually used the system — depth-of-field, not just exposure. ignition sequence runs left-to-right on load.
+
+<p align="center">
+  <img src="./assets/preflight.svg" alt="Pre-flight skill checklist · 22 flight-rated · 4 arming · 3 on manifest" width="100%"/>
+</p>
+
+<details>
+<summary><strong>open the manifest</strong> · drill-down on each system</summary>
+<br/>
 
 <table>
 <tr>
 <td valign="top" width="33%">
 
-**core stack**
+**CH-01 · languages & core**
 
-- `☑` Python · Pandas · NumPy · SciPy
-- `☑` TypeScript · C++ · SQL
-- `☑` git · docker · linux
-- `☑` OOP · DSA · OS · CompOrg
-- `◧` Rust _(personal-time burn)_
+- `▣` **Python** · Pandas, NumPy, SciPy, TF, Keras, PyTorch
+- `▣` **TypeScript** · Next.js, React, RN, Expo
+- `▣` **SQL** · PostgreSQL, Prisma, Firebase
+- `▣` **C++** · DSA / OOP / CompOrg coursework
+- `▣` **git · linux · docker** · workflows + Kind cluster
+- `◧` **Rust** · personal-time burn
 
 </td>
 <td valign="top" width="34%">
 
-**ML / DL**
+**CH-02 · ML / DL**
 
-- `☑` scikit-learn · XGBoost · SHAP
-- `☑` TensorFlow · Keras · PyTorch
-- `☑` anomaly detection · CV · medical imaging
-- `☑` ARIMA · SMOTE · CLAHE · AMP
-- `◧` diffusion models · GANs _(CT roadmap)_
+- `▣` **scikit-learn** · RF, IsolationForest, pipelines
+- `▣` **XGBoost + SHAP** · IIT EMS regression, WMAPE 8.37%
+- `▣` **TensorFlow / Keras** · U-Net, fraud DNN, AMP
+- `▣` **PyTorch** · research prototypes (ramping)
+- `▣` **anomaly detection** · autoencoder, LSTM-AE
+- `▣` **CV / med imaging** · OpenCV, CLAHE, PSNR/SSIM
+- `▣` **time-series (ARIMA)** · Hindalco PdM
+- `◧` **diffusion · GANs** · CT roadmap
+- `◧` **LLM eval / safety** · Glassbox
 
 </td>
 <td valign="top" width="33%">
 
-**systems / product**
+**CH-03 · systems & product**
 
-- `☑` FastAPI · Next.js · React · React Native
-- `☑` PostgreSQL · Prisma · Firebase
-- `☑` Prometheus · Kubernetes · Docker
-- `☑` Cloudinary · Pusher · Sendinblue
-- `☐` Terraform · gRPC · Kafka _(next quarter)_
+- `▣` **Next.js / React** · App Router, RSC, RBAC
+- `▣` **FastAPI** · Glassbox API
+- `▣` **React Native / Expo** · mobile ticketing
+- `▣` **PostgreSQL + Prisma** · Kalakraft schema
+- `▣` **Kubernetes** · Autoscaler 3-node Kind
+- `▣` **Prometheus** · metrics + PromQL + TimescaleDB
+- `▣` **Pusher · WebSockets** · real-time alerts
+- `▣` **Cloudinary · Sharp** · media pipeline
+- `☐` **Terraform** · next-quarter manifest
+- `☐` **gRPC · Kafka** · stream backbones queued
 
 </td>
 </tr>
 </table>
 
-**certifications · ground school**
+**CH-04 · certifications · ground school armed**
 
 - `▣` **AWS Cloud Practitioner** — _Amazon Web Services_
-- `▣` **AWS Certified Machine Learning – Specialty** — _Amazon Web Services · armed_
+- `◧` **AWS Certified Machine Learning – Specialty** — _Amazon Web Services · armed_
 - `▣` **Deep Learning Specialization** — _DeepLearning.AI · Andrew Ng_
 - `▣` **Machine Learning Specialization** — _DeepLearning.AI · Andrew Ng_
 - `▣` **Mathematics for ML** — _DeepLearning.AI · Andrew Ng_
 - `▣` **MATLAB ML toolchain** — _MathWorks · Onramp · ML · Data Viz_
+
+</details>
 
 ---
 
@@ -212,20 +232,35 @@ i like projects where the hard parts are **inspectable**: what data entered, wha
 ## ► BLACK BOX
 
 ```txt
-═══════════════════════════════════════════════════════════════════════════════
-  FLIGHT RECORDER · yash-01                                  end-of-transmission
-───────────────────────────────────────────────────────────────────────────────
-  callsign      :  chauhan, y.                              ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮
-  mission       :  AI/ML systems that explain themselves                  ▮▮▮▮▮
-  primary phase :  IIT-M research · Glassbox · Autoscaler              ▮▮▮▮▮▮▮▮
-  spec          :  CSE · Artificial Intelligence & Machine Learning  ▮▮▮▮▮▮▮▮▮▮
-  affiliation   :  SRM IST · IIT Madras (research) · Hindalco (alumni)   ▮▮▮▮▮▮
-  certs armed   :  AWS ML Specialty · AWS CP · DL.AI ×3 · MathWorks ×4
-───────────────────────────────────────────────────────────────────────────────
-  log integrity :  ✓ verified           audit trail :  github.com commits
-  next sample   :  +6h                  signal lock :  ◉ green
-═══════════════════════════════════════════════════════════════════════════════
-                  > end of recording. mission in progress. _
+> opening tape segment yash-01 · seg-042 ...
+> playback head at 87% · reel rotating · signal locked
 ```
+
+<p align="center">
+  <img src="./assets/black-box.svg" alt="Black box flight recorder · tape reels, mission heartbeat, signed printout" width="100%"/>
+</p>
+
+<details>
+<summary><strong>open the printout</strong> · plain-text decode (for screen readers & dark-image users)</summary>
+<br/>
+
+```txt
+═══════════════════════════════════════════════════════════════════════════════
+  FLIGHT RECORDER · yash-01 · seg-042                          REC // tape rolling
+───────────────────────────────────────────────────────────────────────────────
+  callsign        :  chauhan, y.    // crew of one
+  mission         :  AI/ML systems that explain themselves
+  primary burn    :  IIT-M research · Glassbox · Autoscaler
+  spec            :  CSE · Artificial Intelligence & Machine Learning
+  affiliation     :  SRM IST · IIT Madras (research) · Hindalco (alumni)
+  certs armed     :  AWS ML Specialty · AWS CP · DL.AI ×3 · MathWorks ×4
+───────────────────────────────────────────────────────────────────────────────
+  LOG INTEGRITY   :  ✓ verified            AUDIT TRAIL :  github.com commits
+  NEXT SAMPLE     :  +6h                   SIGNAL LOCK :  ◉ green
+═══════════════════════════════════════════════════════════════════════════════
+  EOT · mission in progress · _
+```
+
+</details>
 
 <sub><i><strong>about this README:</strong> it is a self-observing artifact. the HUD's <code>T+</code> timer, the <code>commits / 30d</code> counter, the <code>last push</code> timestamp, the trajectory's <em>now</em> label, the telemetry panel's bars, language mix, repo / star / commit stats, and the latest-push audit log are all regenerated from the live github api by <a href="./.github/workflows/telemetry.yml">.github/workflows/telemetry.yml</a> running <a href="./.github/scripts/update_telemetry.py">update_telemetry.py</a>. orange bars in the commit chart are days where my activity exceeded μ + 2σ — i.e., anomalies in my own behavior, flagged the same way Autoscaler would flag a pod. fitting, since the whole point of this profile is that the systems i build should be able to explain themselves. so should i.</i></sub>
