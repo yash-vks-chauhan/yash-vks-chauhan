@@ -25,12 +25,14 @@
       .dim { fill: #6E7681; } .soft { fill: #8B949E; } .text { fill: #C9D1D9; } .ttl { fill: #F0F6FC; }
       .cyan { fill: #38BDF8; } .amb { fill: #F59E0B; } .grn { fill: #10B981; } .red { fill: #F87171; }
       .scyan { stroke: #38BDF8; } .samb { stroke: #F59E0B; } .sgrn { stroke: #10B981; } .sdim { stroke: #21262D; }
-      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .pulse  { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
       .pulse2 { animation: pulse 2.8s ease-in-out infinite 0.4s; transform-origin: center; transform-box: fill-box; }
       .pulse3 { animation: pulse 3.2s ease-in-out infinite 0.8s; transform-origin: center; transform-box: fill-box; }
-      .blink { animation: blink 1.8s ease-in-out infinite; }
-      @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.45; } }
-      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+      .blink  { animation: blink 1.8s ease-in-out infinite; }
+      .heartbeat { animation: heartbeat 1.6s ease-in-out infinite; }
+      @keyframes pulse     { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.45; } }
+      @keyframes blink     { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+      @keyframes heartbeat { 0%, 100% { stroke-dashoffset: 0; } 50% { stroke-dashoffset: -30; } }
       .tag { fill: #161B22; stroke: #21262D; }
     </style>
   </defs>
@@ -38,12 +40,10 @@
   <rect width="1200" height="720" fill="url(#bgP)"/>
   <rect width="1200" height="720" fill="url(#gridP)"/>
 
-  <!-- title -->
   <text x="32" y="42" class="mono cyan" font-size="11" letter-spacing="6">[ PAYLOAD MANIFEST ]</text>
-  <text x="32" y="68" class="sans ttl" font-size="22" font-weight="700">CARGO BAY · 6 payloads · 2 in active orbit</text>
-  <text x="32" y="86" class="mono soft" font-size="11">each card is a deployed system · click designation to inspect</text>
+  <text x="32" y="68" class="sans ttl"  font-size="22" font-weight="700">CARGO BAY · 6 payloads · 2 firing · 2 deployed · 1 ongoing · 1 re-entered</text>
+  <text x="32" y="86" class="mono soft" font-size="11">each card is a real shipped system · metrics drawn from the mission log</text>
 
-  <!-- corner brackets -->
   <g stroke="#38BDF8" stroke-width="1.5" fill="none">
     <path d="M 14 14 L 14 44 M 14 14 L 44 14"/>
     <path d="M 1186 14 L 1186 44 M 1186 14 L 1156 14"/>
@@ -53,30 +53,29 @@
 
   <!-- ROW 1 -->
 
-  <!-- PYL-001 GlassBox -->
+  <!-- PYL-001 Glassbox · FIRING (green) -->
   <g transform="translate(32 110)">
     <rect width="370" height="280" fill="#0B0F14" stroke="#21262D"/>
-    <rect x="0" y="0" width="370" height="3" fill="#38BDF8" class="blink"/>
-    <text x="14" y="22" class="mono cyan" font-size="10" letter-spacing="3">PYL-001 · GLASSBOX</text>
-    <g transform="translate(346 18)">
-      <circle r="8" fill="url(#ledG)"/>
-      <circle r="3" class="grn pulse"/>
-    </g>
-    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">case-001 · grounded LLM</text>
+    <rect x="0" y="0" width="370" height="3" fill="#10B981" class="blink"/>
+    <text x="14" y="22"  class="mono grn" font-size="10" letter-spacing="3">PYL-001 · GLASSBOX · FIRING</text>
+    <g transform="translate(346 18)"><circle r="8" fill="url(#ledG)"/><circle r="3" class="grn pulse"/></g>
+    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">grounded LLM</text>
     <text x="14" y="68" class="mono soft" font-size="10">destination: trustworthy AI surfaces</text>
     <line x1="14" y1="80" x2="356" y2="80" class="sdim"/>
+
     <g class="mono" font-size="10" transform="translate(14 100)">
-      <text class="dim" letter-spacing="2">MASS</text><text x="56" class="text">~kLOC TS/Py</text>
-      <text x="190" class="dim" letter-spacing="2">STATUS</text><text x="252" class="grn">ACTIVE</text>
+      <text class="dim" letter-spacing="2">SCOPE</text>
+      <text x="56" class="text">refusal routing · audit replay</text>
     </g>
     <g class="mono" font-size="10" transform="translate(14 116)">
-      <text class="dim" letter-spacing="2">SCOPE</text><text x="56" class="text">refusal routing · audit replay</text>
+      <text class="dim" letter-spacing="2">PAYLOAD</text>
+      <text x="68" class="text">trust scoring · evidence trail</text>
     </g>
     <g class="mono" font-size="10" transform="translate(14 132)">
-      <text class="dim" letter-spacing="2">PAYLOAD</text><text x="68" class="text">trust scoring · evidence trail</text>
+      <text class="dim" letter-spacing="2">STATUS</text>
+      <text x="56" class="grn">production-hardening pass</text>
     </g>
 
-    <!-- mini bars -->
     <g transform="translate(14 154)" class="mono" font-size="8">
       <text class="dim" letter-spacing="2">groundedness</text>
       <rect x="0" y="6" width="180" height="4" fill="#0B0F14" stroke="#21262D"/>
@@ -96,41 +95,42 @@
       <text x="186" y="11" class="grn">100%</text>
     </g>
 
-    <!-- tech tags -->
     <g transform="translate(14 220)" class="mono" font-size="9">
-      <g><rect class="tag" x="0"   y="0" width="56" height="16" rx="2"/><text x="28" y="11" text-anchor="middle" class="text">FastAPI</text></g>
-      <g><rect class="tag" x="62"  y="0" width="56" height="16" rx="2"/><text x="90" y="11" text-anchor="middle" class="text">Next.js</text></g>
+      <g><rect class="tag" x="0"   y="0" width="56" height="16" rx="2"/><text x="28"  y="11" text-anchor="middle" class="text">FastAPI</text></g>
+      <g><rect class="tag" x="62"  y="0" width="56" height="16" rx="2"/><text x="90"  y="11" text-anchor="middle" class="text">Next.js</text></g>
       <g><rect class="tag" x="124" y="0" width="44" height="16" rx="2"/><text x="146" y="11" text-anchor="middle" class="text">LLM</text></g>
       <g><rect class="tag" x="174" y="0" width="52" height="16" rx="2"/><text x="200" y="11" text-anchor="middle" class="text">PgSQL</text></g>
       <g><rect class="tag" x="232" y="0" width="56" height="16" rx="2"/><text x="260" y="11" text-anchor="middle" class="text">audit</text></g>
     </g>
 
-    <text x="14" y="262" class="mono dim" font-size="9" letter-spacing="2">// the README artifact you're looking at takes its name from this</text>
+    <text x="14" y="262" class="mono dim" font-size="9" letter-spacing="2">// the artifact you're reading takes its name from this</text>
   </g>
 
-  <!-- PYL-002 AutoScaler -->
+  <!-- PYL-002 Autoscaler · FIRING (green) -->
   <g transform="translate(415 110)">
     <rect width="370" height="280" fill="#0B0F14" stroke="#21262D"/>
-    <rect x="0" y="0" width="370" height="3" fill="#38BDF8" class="blink"/>
-    <text x="14" y="22" class="mono cyan" font-size="10" letter-spacing="3">PYL-002 · AUTOSCALER</text>
-    <g transform="translate(346 18)">
-      <circle r="8" fill="url(#ledG)"/>
-      <circle r="3" class="grn pulse2"/>
-    </g>
-    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">case-002 · self-healing K8s</text>
+    <rect x="0" y="0" width="370" height="3" fill="#10B981" class="blink"/>
+    <text x="14" y="22"  class="mono grn" font-size="10" letter-spacing="3">PYL-002 · AUTOSCALER · FIRING</text>
+    <g transform="translate(346 18)"><circle r="8" fill="url(#ledG)"/><circle r="3" class="grn pulse2"/></g>
+    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">self-healing K8s</text>
     <text x="14" y="68" class="mono soft" font-size="10">destination: observability + recovery</text>
     <line x1="14" y1="80" x2="356" y2="80" class="sdim"/>
+
     <g class="mono" font-size="10" transform="translate(14 100)">
-      <text class="dim" letter-spacing="2">STACK</text><text x="56" class="text">3-node Kind · Prometheus</text>
+      <text class="dim" letter-spacing="2">STACK</text>
+      <text x="56" class="text">3-node Kind · Prometheus</text>
     </g>
     <g class="mono" font-size="10" transform="translate(14 116)">
-      <text class="dim" letter-spacing="2">DETECT</text><text x="56" class="text">Isolation Forest + LSTM AE</text>
+      <text class="dim" letter-spacing="2">DETECT</text>
+      <text x="56" class="text">Isolation Forest + LSTM AE</text>
     </g>
     <g class="mono" font-size="10" transform="translate(14 132)">
-      <text class="dim" letter-spacing="2">EXPLAIN</text><text x="68" class="text">SHAP feature-importance per metric</text>
+      <text class="dim" letter-spacing="2">EXPLAIN</text>
+      <text x="68" class="text">SHAP feature-importance per metric</text>
     </g>
     <g class="mono" font-size="10" transform="translate(14 148)">
-      <text class="dim" letter-spacing="2">FALLBACK</text><text x="76" class="text">in-cluster RF when LLM unreachable</text>
+      <text class="dim" letter-spacing="2">FALLBACK</text>
+      <text x="76" class="text">in-cluster RF when LLM unreachable</text>
     </g>
 
     <g transform="translate(14 174)" class="mono" font-size="8">
@@ -147,8 +147,8 @@
     </g>
 
     <g transform="translate(14 220)" class="mono" font-size="9">
-      <g><rect class="tag" x="0"   y="0" width="60" height="16" rx="2"/><text x="30" y="11" text-anchor="middle" class="text">K8s</text></g>
-      <g><rect class="tag" x="66"  y="0" width="56" height="16" rx="2"/><text x="94" y="11" text-anchor="middle" class="text">Prom</text></g>
+      <g><rect class="tag" x="0"   y="0" width="60" height="16" rx="2"/><text x="30"  y="11" text-anchor="middle" class="text">K8s</text></g>
+      <g><rect class="tag" x="66"  y="0" width="56" height="16" rx="2"/><text x="94"  y="11" text-anchor="middle" class="text">Prom</text></g>
       <g><rect class="tag" x="128" y="0" width="68" height="16" rx="2"/><text x="162" y="11" text-anchor="middle" class="text">NestJS</text></g>
       <g><rect class="tag" x="202" y="0" width="56" height="16" rx="2"/><text x="230" y="11" text-anchor="middle" class="text">SHAP</text></g>
       <g><rect class="tag" x="264" y="0" width="52" height="16" rx="2"/><text x="290" y="11" text-anchor="middle" class="text">LLM</text></g>
@@ -157,20 +157,16 @@
     <text x="14" y="262" class="mono dim" font-size="9" letter-spacing="2">// chaos-engine ARMED · watchdog reporting GREEN</text>
   </g>
 
-  <!-- PYL-003 CT-Denoise -->
+  <!-- PYL-003 CT-Denoise · ONGOING -->
   <g transform="translate(798 110)">
     <rect width="370" height="280" fill="#0B0F14" stroke="#21262D"/>
     <rect x="0" y="0" width="370" height="3" fill="#F59E0B" class="blink"/>
-    <text x="14" y="22" class="mono amb" font-size="10" letter-spacing="3">PYL-003 · CT-DENOISE</text>
-    <g transform="translate(346 18)">
-      <circle r="8" fill="url(#ledA)"/>
-      <circle r="3" class="amb pulse3"/>
-    </g>
-    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">case-003 · medical imaging</text>
+    <text x="14" y="22"  class="mono amb" font-size="10" letter-spacing="3">PYL-003 · CT-DENOISE · ONGOING</text>
+    <g transform="translate(346 18)"><circle r="8" fill="url(#ledA)"/><circle r="3" class="amb pulse3"/></g>
+    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">medical imaging</text>
     <text x="14" y="68" class="mono soft" font-size="10">destination: diagnostic clarity</text>
     <line x1="14" y1="80" x2="356" y2="80" class="sdim"/>
 
-    <!-- PSNR gauge -->
     <g transform="translate(14 100)" class="mono" font-size="10">
       <text class="dim" letter-spacing="2">PSNR GAIN</text>
       <text x="80" class="amb" font-size="14" font-weight="700">+12 dB</text>
@@ -185,7 +181,6 @@
       <text class="text">95% of 300+ scans improved on all 3 metrics simultaneously</text>
     </g>
 
-    <!-- waveform / signal denoise visual -->
     <g transform="translate(14 162)">
       <text class="mono dim" font-size="8" letter-spacing="2">noisy →  clean</text>
       <path d="M 0 30 Q 8 10, 16 28 T 32 18 T 48 30 T 64 10 T 80 26 T 96 20 T 112 28 T 128 14 T 144 24 T 160 30 T 176 12 T 192 22 T 208 28 T 224 18 T 240 30 T 256 14 T 272 22 T 288 28"
@@ -197,8 +192,8 @@
     </g>
 
     <g transform="translate(14 220)" class="mono" font-size="9">
-      <g><rect class="tag" x="0"   y="0" width="64" height="16" rx="2"/><text x="32" y="11" text-anchor="middle" class="text">U-Net</text></g>
-      <g><rect class="tag" x="70"  y="0" width="56" height="16" rx="2"/><text x="98" y="11" text-anchor="middle" class="text">TF/Keras</text></g>
+      <g><rect class="tag" x="0"   y="0" width="64" height="16" rx="2"/><text x="32"  y="11" text-anchor="middle" class="text">U-Net</text></g>
+      <g><rect class="tag" x="70"  y="0" width="56" height="16" rx="2"/><text x="98"  y="11" text-anchor="middle" class="text">TF/Keras</text></g>
       <g><rect class="tag" x="132" y="0" width="48" height="16" rx="2"/><text x="156" y="11" text-anchor="middle" class="text">CUDA</text></g>
       <g><rect class="tag" x="186" y="0" width="64" height="16" rx="2"/><text x="218" y="11" text-anchor="middle" class="text">CLAHE</text></g>
       <g><rect class="tag" x="256" y="0" width="60" height="16" rx="2"/><text x="286" y="11" text-anchor="middle" class="text">AMP×4</text></g>
@@ -209,16 +204,13 @@
 
   <!-- ROW 2 -->
 
-  <!-- PYL-004 IIT Research -->
+  <!-- PYL-004 IIT Research · ACTIVE ORBIT -->
   <g transform="translate(32 410)">
     <rect width="370" height="280" fill="#0B0F14" stroke="#21262D"/>
     <rect x="0" y="0" width="370" height="3" fill="#F59E0B" class="blink"/>
-    <text x="14" y="22" class="mono amb" font-size="10" letter-spacing="3">PYL-004 · EMS-ANALYTICS</text>
-    <g transform="translate(346 18)">
-      <circle r="8" fill="url(#ledA)"/>
-      <circle r="3" class="amb pulse"/>
-    </g>
-    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">IIT Madras · research intern</text>
+    <text x="14" y="22"  class="mono amb" font-size="10" letter-spacing="3">PYL-004 · EMS-ANALYTICS · ACTIVE ORBIT</text>
+    <g transform="translate(346 18)"><circle r="8" fill="url(#ledA)"/><circle r="3" class="amb pulse"/></g>
+    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">IIT Madras · research</text>
     <text x="14" y="68" class="mono soft" font-size="10">destination: ambulance response analytics</text>
     <line x1="14" y1="80" x2="356" y2="80" class="sdim"/>
 
@@ -251,8 +243,8 @@
     </g>
 
     <g transform="translate(14 220)" class="mono" font-size="9">
-      <g><rect class="tag" x="0"   y="0" width="56" height="16" rx="2"/><text x="28" y="11" text-anchor="middle" class="text">XGBoost</text></g>
-      <g><rect class="tag" x="62"  y="0" width="48" height="16" rx="2"/><text x="86" y="11" text-anchor="middle" class="text">SHAP</text></g>
+      <g><rect class="tag" x="0"   y="0" width="56" height="16" rx="2"/><text x="28"  y="11" text-anchor="middle" class="text">XGBoost</text></g>
+      <g><rect class="tag" x="62"  y="0" width="48" height="16" rx="2"/><text x="86"  y="11" text-anchor="middle" class="text">SHAP</text></g>
       <g><rect class="tag" x="116" y="0" width="52" height="16" rx="2"/><text x="142" y="11" text-anchor="middle" class="text">OSMnx</text></g>
       <g><rect class="tag" x="174" y="0" width="60" height="16" rx="2"/><text x="204" y="11" text-anchor="middle" class="text">NetworkX</text></g>
       <g><rect class="tag" x="240" y="0" width="48" height="16" rx="2"/><text x="264" y="11" text-anchor="middle" class="text">Folium</text></g>
@@ -261,93 +253,100 @@
     <text x="14" y="262" class="mono dim" font-size="9" letter-spacing="2">// active orbit since Mar 2025 · publication-grade dashboards</text>
   </g>
 
-  <!-- PYL-005 Hindalco / Kalakraft (paired) -->
+  <!-- PYL-005 Kalakraft · DEPLOYED -->
   <g transform="translate(415 410)">
     <rect width="370" height="280" fill="#0B0F14" stroke="#21262D"/>
-    <rect x="0" y="0" width="370" height="3" fill="#10B981"/>
-    <text x="14" y="22" class="mono grn" font-size="10" letter-spacing="3">PYL-005 · HINDALCO + KALAKRAFT</text>
-    <g transform="translate(346 18)">
-      <circle r="8" fill="url(#ledC)"/>
-      <circle r="3" class="cyan pulse2"/>
-    </g>
-    <text x="14" y="48" class="sans ttl" font-size="18" font-weight="700">industry · prod ship</text>
-    <text x="14" y="68" class="mono soft" font-size="10">destination: real-world bytes in production</text>
+    <rect x="0" y="0" width="370" height="3" fill="#38BDF8"/>
+    <text x="14" y="22"  class="mono cyan" font-size="10" letter-spacing="3">PYL-005 · KALAKRAFT · DEPLOYED</text>
+    <g transform="translate(346 18)"><circle r="8" fill="url(#ledC)"/><circle r="3" class="cyan pulse2"/></g>
+    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">full-stack marketplace</text>
+    <text x="14" y="68" class="mono soft" font-size="10">destination: production · paying customers · real ops</text>
     <line x1="14" y1="80" x2="356" y2="80" class="sdim"/>
 
-    <text x="14" y="100" class="mono amb" font-size="10" letter-spacing="2">SUMMER 2025 · HINDALCO</text>
-    <g class="mono" font-size="9" transform="translate(14 116)">
-      <text class="dim">predictive maintenance · MTell · Proficy Historian · ARIMA</text>
+    <g class="mono" font-size="10" transform="translate(14 100)">
+      <text class="dim" letter-spacing="2">FRONTEND</text>
+      <text x="68" class="text">Next.js App Router · React · TS</text>
     </g>
-    <g class="mono" font-size="20" font-weight="700" transform="translate(14 142)">
-      <text class="grn">−20%</text>
-      <text x="100" class="grn">−15%</text>
+    <g class="mono" font-size="10" transform="translate(14 116)">
+      <text class="dim" letter-spacing="2">DATA</text>
+      <text x="56" class="text">PostgreSQL + Prisma</text>
     </g>
-    <g class="mono" font-size="8" transform="translate(14 156)">
-      <text class="dim" letter-spacing="2">unscheduled downtime</text>
-      <text x="100" class="dim" letter-spacing="2">maint cost</text>
+    <g class="mono" font-size="10" transform="translate(14 132)">
+      <text class="dim" letter-spacing="2">AUTH</text>
+      <text x="56" class="text">Firebase / NextAuth · RBAC</text>
     </g>
-
-    <line x1="14" y1="174" x2="356" y2="174" class="sdim"/>
-
-    <text x="14" y="192" class="mono cyan" font-size="10" letter-spacing="2">JUN 2025 · KALAKRAFT</text>
-    <g class="mono" font-size="9" transform="translate(14 208)">
-      <text class="dim">full-stack marketplace · Next.js · Pusher · Cloudinary</text>
+    <g class="mono" font-size="10" transform="translate(14 148)">
+      <text class="dim" letter-spacing="2">REAL-TIME</text>
+      <text x="76" class="text">Pusher websockets · low-stock alerts</text>
+    </g>
+    <g class="mono" font-size="10" transform="translate(14 164)">
+      <text class="dim" letter-spacing="2">MEDIA</text>
+      <text x="56" class="text">Sharp + Cloudinary pipeline</text>
+    </g>
+    <g class="mono" font-size="10" transform="translate(14 180)">
+      <text class="dim" letter-spacing="2">FLOWS</text>
+      <text x="56" class="text">Sendinblue tx + marketing email</text>
+    </g>
+    <g class="mono" font-size="10" transform="translate(14 196)">
+      <text class="dim" letter-spacing="2">CI/CD</text>
+      <text x="56" class="text">Vercel · preview environments</text>
     </g>
 
     <g transform="translate(14 220)" class="mono" font-size="9">
-      <g><rect class="tag" x="0"   y="0" width="56" height="16" rx="2"/><text x="28" y="11" text-anchor="middle" class="text">ARIMA</text></g>
-      <g><rect class="tag" x="62"  y="0" width="56" height="16" rx="2"/><text x="90" y="11" text-anchor="middle" class="text">PowerBI</text></g>
-      <g><rect class="tag" x="124" y="0" width="56" height="16" rx="2"/><text x="152" y="11" text-anchor="middle" class="text">Next.js</text></g>
-      <g><rect class="tag" x="186" y="0" width="56" height="16" rx="2"/><text x="214" y="11" text-anchor="middle" class="text">Prisma</text></g>
-      <g><rect class="tag" x="248" y="0" width="60" height="16" rx="2"/><text x="278" y="11" text-anchor="middle" class="text">Pusher</text></g>
+      <g><rect class="tag" x="0"   y="0" width="56" height="16" rx="2"/><text x="28"  y="11" text-anchor="middle" class="text">Next.js</text></g>
+      <g><rect class="tag" x="62"  y="0" width="56" height="16" rx="2"/><text x="90"  y="11" text-anchor="middle" class="text">Prisma</text></g>
+      <g><rect class="tag" x="124" y="0" width="56" height="16" rx="2"/><text x="152" y="11" text-anchor="middle" class="text">Pusher</text></g>
+      <g><rect class="tag" x="186" y="0" width="68" height="16" rx="2"/><text x="220" y="11" text-anchor="middle" class="text">Cloudinary</text></g>
+      <g><rect class="tag" x="260" y="0" width="52" height="16" rx="2"/><text x="286" y="11" text-anchor="middle" class="text">Vercel</text></g>
     </g>
 
-    <text x="14" y="262" class="mono dim" font-size="9" letter-spacing="2">// re-entry complete · payload deployed to prod</text>
+    <text x="14" y="262" class="mono dim" font-size="9" letter-spacing="2">// shipped Jun 2025 · admin dashboard · revenue + reviews + tickets</text>
   </g>
 
-  <!-- PYL-006 Fraud Detection + Appointment App -->
+  <!-- PYL-006 Hindalco · RE-ENTERED -->
   <g transform="translate(798 410)">
     <rect width="370" height="280" fill="#0B0F14" stroke="#21262D"/>
-    <rect x="0" y="0" width="370" height="3" fill="#6E7681"/>
-    <text x="14" y="22" class="mono dim" font-size="10" letter-spacing="3">PYL-006 · CASE CLOSED</text>
-    <g transform="translate(346 18)">
-      <circle r="8" fill="url(#ledD)"/>
-      <circle r="3" class="dim"/>
-    </g>
-    <text x="14" y="48" class="sans ttl" font-size="18" font-weight="700">recovered · in archive</text>
-    <text x="14" y="68" class="mono soft" font-size="10">destination: previous orbit · still callable</text>
+    <rect x="0" y="0" width="370" height="3" fill="#38BDF8"/>
+    <text x="14" y="22"  class="mono cyan" font-size="10" letter-spacing="3">PYL-006 · HINDALCO · RE-ENTERED</text>
+    <g transform="translate(346 18)"><circle r="8" fill="url(#ledC)"/><circle r="3" class="cyan pulse3"/></g>
+    <text x="14" y="48" class="sans ttl" font-size="20" font-weight="700">industrial PdM</text>
+    <text x="14" y="68" class="mono soft" font-size="10">destination: real metal · real downtime · real money</text>
     <line x1="14" y1="80" x2="356" y2="80" class="sdim"/>
 
-    <text x="14" y="100" class="mono cyan" font-size="10" letter-spacing="2">JAN 2025 · FRAUD-DETECTOR</text>
-    <g class="mono" font-size="9" transform="translate(14 116)">
-      <text class="dim">TensorFlow · SMOTE · anomaly detection</text>
+    <g class="mono" font-size="26" font-weight="700" transform="translate(14 116)">
+      <text class="grn">−20%</text>
+      <text x="140" class="grn">−15%</text>
     </g>
-    <g class="mono" transform="translate(14 138)" font-size="9">
-      <text class="dim" letter-spacing="2">ACCURACY</text>
-      <text x="72" class="text" font-weight="700">97.34%</text>
-      <text x="140" class="dim" letter-spacing="2">PRECISION</text>
-      <text x="210" class="text">0.99 / 0.96</text>
-    </g>
-    <g class="mono" transform="translate(14 152)" font-size="9">
-      <text class="dim" letter-spacing="2">RECALL</text>
-      <text x="56" class="text">0.95 (fraud)  ·  0.99 (non-fraud)</text>
+    <g class="mono" font-size="8" transform="translate(14 130)">
+      <text class="dim" letter-spacing="2">unscheduled downtime</text>
+      <text x="140" class="dim" letter-spacing="2">maint cost</text>
     </g>
 
-    <line x1="14" y1="172" x2="356" y2="172" class="sdim"/>
-
-    <text x="14" y="190" class="mono cyan" font-size="10" letter-spacing="2">SEP 2024 · TICKETING APP</text>
-    <g class="mono" font-size="9" transform="translate(14 206)">
-      <text class="dim">React Native · Expo · TS · SQL · auth + RBAC</text>
+    <g transform="translate(14 156)" class="mono" font-size="10">
+      <text class="dim" letter-spacing="2">SENSORS</text>
+      <text x="68" class="text">high-frequency streams via Proficy Historian</text>
+    </g>
+    <g transform="translate(14 172)" class="mono" font-size="10">
+      <text class="dim" letter-spacing="2">MODELS</text>
+      <text x="60" class="text">asset-level ARIMA + custom anomaly detect</text>
+    </g>
+    <g transform="translate(14 188)" class="mono" font-size="10">
+      <text class="dim" letter-spacing="2">ALERTS</text>
+      <text x="60" class="text">real-time · routed into maint workflows</text>
+    </g>
+    <g transform="translate(14 204)" class="mono" font-size="10">
+      <text class="dim" letter-spacing="2">REPORT</text>
+      <text x="60" class="text">Power BI dashboards · execs + engineers</text>
     </g>
 
     <g transform="translate(14 220)" class="mono" font-size="9">
-      <g><rect class="tag" x="0"   y="0" width="56" height="16" rx="2"/><text x="28" y="11" text-anchor="middle" class="text">TF</text></g>
-      <g><rect class="tag" x="62"  y="0" width="56" height="16" rx="2"/><text x="90" y="11" text-anchor="middle" class="text">SMOTE</text></g>
-      <g><rect class="tag" x="124" y="0" width="48" height="16" rx="2"/><text x="148" y="11" text-anchor="middle" class="text">DNN</text></g>
-      <g><rect class="tag" x="178" y="0" width="56" height="16" rx="2"/><text x="206" y="11" text-anchor="middle" class="text">RN/Expo</text></g>
-      <g><rect class="tag" x="240" y="0" width="44" height="16" rx="2"/><text x="262" y="11" text-anchor="middle" class="text">SQL</text></g>
+      <g><rect class="tag" x="0"   y="0" width="56" height="16" rx="2"/><text x="28"  y="11" text-anchor="middle" class="text">MTell</text></g>
+      <g><rect class="tag" x="62"  y="0" width="68" height="16" rx="2"/><text x="96"  y="11" text-anchor="middle" class="text">Proficy</text></g>
+      <g><rect class="tag" x="136" y="0" width="48" height="16" rx="2"/><text x="160" y="11" text-anchor="middle" class="text">ARIMA</text></g>
+      <g><rect class="tag" x="190" y="0" width="64" height="16" rx="2"/><text x="222" y="11" text-anchor="middle" class="text">Power BI</text></g>
+      <g><rect class="tag" x="260" y="0" width="60" height="16" rx="2"/><text x="290" y="11" text-anchor="middle" class="text">MES</text></g>
     </g>
 
-    <text x="14" y="262" class="mono dim" font-size="9" letter-spacing="2">// not abandoned · proofs in archive</text>
+    <text x="14" y="262" class="mono dim" font-size="9" letter-spacing="2">// summer 2025 · electrical &amp; instrumentation · Hindalco Industries</text>
   </g>
 </svg>

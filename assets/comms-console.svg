@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" role="img" aria-label="Comms console">
+  <defs>
+    <linearGradient id="bgK" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#010409"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#38BDF8" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="ledGc" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ledAc" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ledCc" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridK" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#161B22" stroke-width="0.5"/>
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Inter, sans-serif; }
+      .dim { fill: #6E7681; } .soft { fill: #8B949E; } .text { fill: #C9D1D9; } .ttl { fill: #F0F6FC; }
+      .cyan { fill: #38BDF8; } .amb { fill: #F59E0B; } .grn { fill: #10B981; }
+      .pulse  { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .pulse2 { animation: pulse 2.7s ease-in-out infinite 0.4s; transform-origin: center; transform-box: fill-box; }
+      .pulse3 { animation: pulse 3.1s ease-in-out infinite 0.9s; transform-origin: center; transform-box: fill-box; }
+      .tx     { animation: tx 1.4s ease-in-out infinite; }
+      .scan   { animation: scanK 7s linear infinite; }
+      @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: 0.4; } }
+      @keyframes tx    { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -40; } }
+      @keyframes scanK { 0% { transform: translateY(-8px); opacity: 0; } 8% { opacity: 0.6; } 92% { opacity: 0.6; } 100% { transform: translateY(290px); opacity: 0; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="280" fill="url(#bgK)"/>
+  <rect width="1200" height="280" fill="url(#gridK)"/>
+
+  <g stroke="#38BDF8" stroke-width="1.5" fill="none">
+    <path d="M 14 14 L 14 44 M 14 14 L 44 14"/>
+    <path d="M 1186 14 L 1186 44 M 1186 14 L 1156 14"/>
+    <path d="M 14 266 L 14 236 M 14 266 L 44 266"/>
+    <path d="M 1186 266 L 1186 236 M 1186 266 L 1156 266"/>
+  </g>
+
+  <text x="32" y="42" class="mono cyan" font-size="11" letter-spacing="6">[ COMMS CONSOLE ]</text>
+  <text x="32" y="68" class="sans ttl"  font-size="22" font-weight="700">CHANNEL ROSTER · 5 frequencies tuned</text>
+  <text x="32" y="86" class="mono soft" font-size="11">all channels monitored · preferred channel highlighted · response p95 &lt; 48h</text>
+
+  <!-- channels -->
+  <g transform="translate(32 112)" class="mono">
+    <!-- preferred: email -->
+    <g>
+      <rect width="1136" height="28" fill="#0B0F14" stroke="#10B981" stroke-width="1.2"/>
+      <g transform="translate(16 14)"><circle r="5" fill="url(#ledGc)"/><circle r="2.4" class="grn pulse"/></g>
+      <text x="36" y="19" font-size="11" letter-spacing="3">
+        <tspan class="grn">TX · PRIMARY</tspan><tspan class="dim"> // </tspan>
+        <tspan class="text">yash.vks.chauhan@gmail.com</tspan>
+      </text>
+      <text x="1120" y="19" text-anchor="end" font-size="10" class="grn" letter-spacing="2">PREFERRED · TUNED</text>
+      <!-- TX dash pattern -->
+      <line x1="36" y1="24" x2="380" y2="24" stroke="#10B981" stroke-width="0.6" stroke-dasharray="6 4" class="tx" opacity="0.6"/>
+    </g>
+
+    <!-- linkedin -->
+    <g transform="translate(0 36)">
+      <rect width="1136" height="28" fill="#0B0F14" stroke="#1F2937"/>
+      <g transform="translate(16 14)"><circle r="5" fill="url(#ledCc)"/><circle r="2.4" class="cyan pulse2"/></g>
+      <text x="36" y="19" font-size="11" letter-spacing="3">
+        <tspan class="cyan">TX · LONGFORM</tspan><tspan class="dim"> // </tspan>
+        <tspan class="text">linkedin.com/in/yash-vks-chauhan</tspan>
+      </text>
+      <text x="1120" y="19" text-anchor="end" font-size="10" class="soft" letter-spacing="2">PROFESSIONAL · TUNED</text>
+    </g>
+
+    <!-- github -->
+    <g transform="translate(0 72)">
+      <rect width="1136" height="28" fill="#0B0F14" stroke="#1F2937"/>
+      <g transform="translate(16 14)"><circle r="5" fill="url(#ledCc)"/><circle r="2.4" class="cyan pulse3"/></g>
+      <text x="36" y="19" font-size="11" letter-spacing="3">
+        <tspan class="cyan">TX · SRC</tspan><tspan class="dim" letter-spacing="3"> // </tspan>
+        <tspan class="text">github.com/yash-vks-chauhan</tspan>
+        <tspan class="dim"> · </tspan>
+        <tspan class="soft">source of truth · this artifact</tspan>
+      </text>
+      <text x="1120" y="19" text-anchor="end" font-size="10" class="soft" letter-spacing="2">CODE · TUNED</text>
+    </g>
+
+    <!-- phone -->
+    <g transform="translate(0 108)">
+      <rect width="1136" height="28" fill="#0B0F14" stroke="#1F2937"/>
+      <g transform="translate(16 14)"><circle r="5" fill="url(#ledAc)"/><circle r="2.4" class="amb pulse"/></g>
+      <text x="36" y="19" font-size="11" letter-spacing="3">
+        <tspan class="amb">RX · EMERG</tspan><tspan class="dim"> // </tspan>
+        <tspan class="text">+91 8208 9529 85</tspan>
+        <tspan class="dim"> · </tspan>
+        <tspan class="soft">voice / sms · emergency frequency</tspan>
+      </text>
+      <text x="1120" y="19" text-anchor="end" font-size="10" class="amb" letter-spacing="2">RESTRICTED</text>
+    </g>
+
+    <!-- location -->
+    <g transform="translate(0 144)">
+      <rect width="1136" height="28" fill="#0B0F14" stroke="#1F2937"/>
+      <g transform="translate(16 14)"><circle r="5" fill="url(#ledCc)"/><circle r="2.4" class="cyan pulse2"/></g>
+      <text x="36" y="19" font-size="11" letter-spacing="3">
+        <tspan class="cyan">LOC</tspan><tspan class="dim"> // </tspan>
+        <tspan class="text">Chennai, IN</tspan>
+        <tspan class="dim"> · </tspan>
+        <tspan class="soft">GMT+5:30 · local sidereal time</tspan>
+        <tspan class="dim"> · </tspan>
+        <tspan class="text">open to remote and relocation</tspan>
+      </text>
+      <text x="1120" y="19" text-anchor="end" font-size="10" class="soft" letter-spacing="2">GEO-LOCK</text>
+    </g>
+  </g>
+
+  <!-- bottom strip -->
+  <g transform="translate(32 240)">
+    <rect width="1136" height="14" fill="#0B0F14" stroke="#161B22"/>
+    <text x="14" y="11" class="mono" font-size="10" letter-spacing="3">
+      <tspan class="dim">SLA</tspan>
+      <tspan class="text"> recruiter DMs answered at p95 &lt; 48h </tspan>
+      <tspan class="dim">·</tspan>
+      <tspan class="text"> exam-burn windows degrade response · pre-warn helps </tspan>
+      <tspan class="dim">·</tspan>
+      <tspan class="amb"> open channel: gmail </tspan>
+      <tspan class="dim">·</tspan>
+      <tspan class="cyan"> avg first reply 9h </tspan>
+    </text>
+  </g>
+
+  <!-- scanline -->
+  <rect x="20" y="-10" width="1160" height="2" fill="url(#cyanGlow3)" opacity="0.45" class="scan"/>
+</svg>

@@ -5,9 +5,9 @@
       <stop offset="1" stop-color="#010409"/>
     </linearGradient>
     <linearGradient id="pathGlow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#1E3A8A"/>
+      <stop offset="0"   stop-color="#1E3A8A"/>
       <stop offset="0.5" stop-color="#38BDF8"/>
-      <stop offset="1" stop-color="#F59E0B"/>
+      <stop offset="1"   stop-color="#F59E0B"/>
     </linearGradient>
     <radialGradient id="burnAmber" cx="0.5" cy="0.5" r="0.5">
       <stop offset="0" stop-color="#F59E0B"/>
@@ -17,33 +17,38 @@
       <stop offset="0" stop-color="#38BDF8"/>
       <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="burnGreen" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="grid2" width="60" height="60" patternUnits="userSpaceOnUse">
       <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#161B22" stroke-width="0.5"/>
     </pattern>
     <style>
       .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
       .sans { font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Inter, sans-serif; }
-      .dim { fill: #6E7681; } .soft { fill: #8B949E; } .text { fill: #C9D1D9; }
-      .cyan { fill: #38BDF8; } .amb { fill: #F59E0B; } .grn { fill: #10B981; }
-      .ttl { fill: #F0F6FC; }
-      .draw { stroke-dasharray: 1600; stroke-dashoffset: 1600; animation: draw 4.5s ease-out 0.3s forwards; }
-      .pulse { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .dim  { fill: #6E7681; } .soft { fill: #8B949E; } .text { fill: #C9D1D9; } .ttl { fill: #F0F6FC; }
+      .cyan { fill: #38BDF8; } .amb  { fill: #F59E0B; } .grn  { fill: #10B981; }
+      .draw       { stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: draw 4.5s ease-out 0.3s forwards; }
+      .pulse      { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
       .pulse-late { animation: pulse 2.6s ease-in-out infinite 0.6s; transform-origin: center; transform-box: fill-box; }
-      .rocket { offset-path: path('M 90 380 C 220 360, 280 320, 360 300 S 500 240, 580 220 S 740 170, 820 150 S 980 100, 1120 70'); offset-rotate: auto; animation: rocketFly 12s ease-in-out infinite; }
-      .twinkle1 { animation: twinkle 3s ease-in-out infinite; }
-      .twinkle2 { animation: twinkle 4.2s ease-in-out infinite 0.8s; }
-      .twinkle3 { animation: twinkle 5s ease-in-out infinite 1.4s; }
-      @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: 0.4; } }
-      @keyframes draw  { to { stroke-dashoffset: 0; } }
-      @keyframes rocketFly { 0% { offset-distance: 0%; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
-      @keyframes twinkle { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.9; } }
+      .pulse-slow { animation: pulse 3.4s ease-in-out infinite 0.9s; transform-origin: center; transform-box: fill-box; }
+      .firing     { animation: firing 1.6s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      .rocket     { offset-path: path('M 120 376 Q 170 368, 220 358 Q 280 332, 320 310 Q 430 278, 540 230 Q 605 215, 660 205 Q 695 192, 720 185 Q 770 165, 820 150 Q 870 132, 920 118 Q 965 105, 1010 95 Q 1070 80, 1120 70'); offset-rotate: auto; animation: rocketFly 14s ease-in-out infinite; }
+      .twinkle1   { animation: twinkle 3s   ease-in-out infinite; }
+      .twinkle2   { animation: twinkle 4.2s ease-in-out infinite 0.8s; }
+      .twinkle3   { animation: twinkle 5s   ease-in-out infinite 1.4s; }
+      @keyframes pulse     { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: 0.4; } }
+      @keyframes firing    { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(2.1); opacity: 0.25; } }
+      @keyframes draw      { to { stroke-dashoffset: 0; } }
+      @keyframes rocketFly { 0% { offset-distance: 0%; opacity: 0; } 6% { opacity: 1; } 94% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+      @keyframes twinkle   { 0%, 100% { opacity: 0.25; } 50% { opacity: 0.95; } }
     </style>
   </defs>
 
   <rect width="1200" height="440" fill="url(#bg2)"/>
   <rect width="1200" height="440" fill="url(#grid2)"/>
 
-  <!-- corner brackets -->
   <g stroke="#38BDF8" stroke-width="1.5" fill="none">
     <path d="M 14 14 L 14 44 M 14 14 L 44 14"/>
     <path d="M 1186 14 L 1186 44 M 1186 14 L 1156 14"/>
@@ -51,12 +56,18 @@
     <path d="M 1186 426 L 1186 396 M 1186 426 L 1156 426"/>
   </g>
 
-  <!-- title -->
-  <text x="32" y="42" class="mono cyan" font-size="11" letter-spacing="6">[ TRAJECTORY  yash-01 ]</text>
-  <text x="32" y="68" class="sans ttl" font-size="22" font-weight="700">FLIGHT PATH · Aug 2023 → present</text>
-  <text x="32" y="86" class="mono soft" font-size="11">altitude vs. time · burn points annotated · all data from mission log</text>
+  <text x="32" y="42" class="mono cyan" font-size="11" letter-spacing="6">[ TRAJECTORY · yash-01 ]</text>
+  <text x="32" y="68" class="sans ttl"  font-size="22" font-weight="700">FLIGHT PATH · Aug 2023 → present</text>
+  <text x="32" y="86" class="mono soft" font-size="11">altitude vs. time · burns annotated · pulsing rings = still firing</text>
 
-  <!-- twinkling stars (background depth) -->
+  <!-- legend -->
+  <g transform="translate(960 44)" class="mono" font-size="9" letter-spacing="2">
+    <g><circle cx="0" cy="0" r="3" class="cyan"/><text x="10" y="3" class="soft">foundations</text></g>
+    <g transform="translate(110 0)"><circle cx="0" cy="0" r="3" class="amb"/><text x="10" y="3" class="soft">major burn</text></g>
+    <g transform="translate(212 0)"><circle cx="0" cy="0" r="3" class="grn"/><text x="10" y="3" class="soft">firing now</text></g>
+  </g>
+
+  <!-- background depth · twinkling stars -->
   <g fill="#C9D1D9">
     <circle cx="180"  cy="120" r="0.9" class="twinkle1"/>
     <circle cx="340"  cy="80"  r="0.7" class="twinkle2"/>
@@ -67,6 +78,10 @@
     <circle cx="260"  cy="180" r="0.6" class="twinkle2"/>
     <circle cx="780"  cy="220" r="0.7" class="twinkle3"/>
     <circle cx="1140" cy="250" r="0.8" class="twinkle1"/>
+    <circle cx="80"   cy="240" r="0.7" class="twinkle2"/>
+    <circle cx="420"  cy="170" r="0.5" class="twinkle1"/>
+    <circle cx="620"  cy="280" r="0.6" class="twinkle3"/>
+    <circle cx="980"  cy="200" r="0.5" class="twinkle1"/>
   </g>
 
   <!-- axes -->
@@ -74,14 +89,12 @@
     <line x1="80" y1="400" x2="1160" y2="400" stroke="#1F2937"/>
     <line x1="80" y1="120" x2="80"   y2="400" stroke="#1F2937"/>
 
-    <!-- y ticks (altitude / scope) -->
     <text x="68" y="404" text-anchor="end" letter-spacing="1">ground</text>
     <text x="68" y="334" text-anchor="end" letter-spacing="1">apps</text>
     <text x="68" y="264" text-anchor="end" letter-spacing="1">systems</text>
     <text x="68" y="194" text-anchor="end" letter-spacing="1">research</text>
     <text x="68" y="124" text-anchor="end" letter-spacing="1">orbit</text>
 
-    <!-- x ticks (time) -->
     <text x="120"  y="418" text-anchor="middle" letter-spacing="1">T+0</text>
     <text x="120"  y="430" text-anchor="middle" fill="#8B949E">Aug 2023</text>
     <text x="320"  y="418" text-anchor="middle" letter-spacing="1">T+5m</text>
@@ -99,35 +112,36 @@
   <!-- horizon glow -->
   <rect x="80" y="398" width="1080" height="4" fill="url(#pathGlow)" opacity="0.5"/>
 
-  <!-- flight path -->
-  <path d="M 90 380 C 220 360, 280 320, 360 300 S 500 240, 580 220 S 740 170, 820 150 S 980 100, 1120 70"
-        fill="none" stroke="url(#pathGlow)" stroke-width="2.2" class="draw"/>
-
-  <!-- shadow path (faint) -->
-  <path d="M 90 380 C 220 360, 280 320, 360 300 S 500 240, 580 220 S 740 170, 820 150 S 980 100, 1120 70"
+  <!-- ===== FLIGHT PATH ===== -->
+  <!-- path passes precisely through every burn point below -->
+  <path id="flight"
+        d="M 120 376 Q 170 368, 220 358 Q 280 332, 320 310 Q 430 278, 540 230 Q 605 215, 660 205 Q 695 192, 720 185 Q 770 165, 820 150 Q 870 132, 920 118 Q 965 105, 1010 95 Q 1070 80, 1120 70"
+        fill="none" stroke="url(#pathGlow)" stroke-width="2.2" class="draw" stroke-linecap="round"/>
+  <path d="M 120 376 Q 170 368, 220 358 Q 280 332, 320 310 Q 430 278, 540 230 Q 605 215, 660 205 Q 695 192, 720 185 Q 770 165, 820 150 Q 870 132, 920 118 Q 965 105, 1010 95 Q 1070 80, 1120 70"
         fill="none" stroke="#38BDF8" stroke-width="0.6" opacity="0.25"/>
 
-  <!-- burn points -->
-  <!-- B0: Aug 2023, mission start -->
-  <g transform="translate(120 374)">
+  <!-- ===== BURN POINTS (precisely on the flight path) ===== -->
+
+  <!-- B-00 · Aug 2023 · launch -->
+  <g transform="translate(120 376)">
     <circle r="11" fill="url(#burnCyan)" class="pulse"/>
     <circle r="3.5" class="cyan"/>
-    <text x="14" y="-6" class="mono cyan" font-size="10" letter-spacing="2">B-00</text>
-    <text x="14" y="6"  class="mono text" font-size="10">launch</text>
-    <text x="14" y="18" class="mono soft" font-size="9">SRM · CSE AI/ML</text>
+    <text x="14" y="-6"  class="mono cyan" font-size="10" letter-spacing="2">B-00</text>
+    <text x="14" y="6"   class="mono text" font-size="10">launch</text>
+    <text x="14" y="18"  class="mono soft" font-size="9">SRM · CSE AI/ML</text>
   </g>
 
-  <!-- B1: Oct 2023, DeepLearning.AI -->
-  <g transform="translate(220 348)">
+  <!-- B-01 · Oct 2023 · DL.AI -->
+  <g transform="translate(220 358)">
     <circle r="9" fill="url(#burnCyan)" class="pulse-late"/>
     <circle r="3" class="cyan"/>
     <text x="-14" y="-14" class="mono cyan" font-size="10" letter-spacing="2" text-anchor="end">B-01</text>
     <text x="-14" y="-4"  class="mono text" font-size="10" text-anchor="end">DL.AI · Andrew Ng</text>
-    <text x="-14" y="6"   class="mono soft" font-size="9" text-anchor="end">3 specializations</text>
+    <text x="-14" y="6"   class="mono soft" font-size="9"  text-anchor="end">3 specializations</text>
   </g>
 
-  <!-- B2: Jan 2024, MATLAB + AWS CP -->
-  <g transform="translate(320 324)">
+  <!-- B-02 · Jan 2024 · MATLAB + AWS CP -->
+  <g transform="translate(320 310)">
     <circle r="9" fill="url(#burnCyan)" class="pulse"/>
     <circle r="3" class="cyan"/>
     <text x="14" y="-6" class="mono cyan" font-size="10" letter-spacing="2">B-02</text>
@@ -135,74 +149,83 @@
     <text x="14" y="18" class="mono soft" font-size="9">first cloud cert</text>
   </g>
 
-  <!-- B3: Sep 2024, Appointment App -->
-  <g transform="translate(540 270)">
+  <!-- B-03 · Sep 2024 · first full-stack ship -->
+  <g transform="translate(540 230)">
     <circle r="9" fill="url(#burnCyan)" class="pulse-late"/>
     <circle r="3" class="cyan"/>
     <text x="-14" y="-14" class="mono cyan" font-size="10" letter-spacing="2" text-anchor="end">B-03</text>
     <text x="-14" y="-4"  class="mono text" font-size="10" text-anchor="end">first full-stack ship</text>
-    <text x="-14" y="6"   class="mono soft" font-size="9" text-anchor="end">RN · TS · SQL</text>
+    <text x="-14" y="6"   class="mono soft" font-size="9"  text-anchor="end">RN · TS · SQL</text>
   </g>
 
-  <!-- B4: Jan 2025, Fraud Detection -->
-  <g transform="translate(660 244)">
+  <!-- B-04 · Jan 2025 · Fraud Detection -->
+  <g transform="translate(660 205)">
     <circle r="9" fill="url(#burnAmber)" class="pulse"/>
     <circle r="3" class="amb"/>
-    <text x="14" y="-6" class="mono amb" font-size="10" letter-spacing="2">B-04</text>
+    <text x="14" y="-6" class="mono amb"  font-size="10" letter-spacing="2">B-04</text>
     <text x="14" y="6"  class="mono text" font-size="10">fraud-detector</text>
     <text x="14" y="18" class="mono soft" font-size="9">97.34% acc · SMOTE</text>
   </g>
 
-  <!-- B5: Feb 2025, CT Denoising U-Net -->
-  <g transform="translate(720 222)">
-    <circle r="11" fill="url(#burnAmber)" class="pulse-late"/>
-    <circle r="3.5" class="amb"/>
-    <text x="-14" y="-14" class="mono amb" font-size="10" letter-spacing="2" text-anchor="end">B-05</text>
-    <text x="-14" y="-4"  class="mono text" font-size="10" text-anchor="end">CT denoising U-Net</text>
-    <text x="-14" y="6"   class="mono soft" font-size="9" text-anchor="end">+12 dB PSNR · 95% noise↓</text>
-  </g>
-
-  <!-- B6: Mar 2025, IIT Madras research -->
-  <g transform="translate(820 180)">
-    <circle r="13" fill="url(#burnAmber)" class="pulse"/>
-    <circle r="4" class="amb"/>
-    <text x="16" y="-6" class="mono amb" font-size="10" letter-spacing="2">B-06 · MAJOR</text>
-    <text x="16" y="6"  class="mono text" font-size="10">IIT Madras · research intern</text>
-    <text x="16" y="18" class="mono soft" font-size="9">3.59M EMS records · 8,567 anomalies · WMAPE 8.37%</text>
-  </g>
-
-  <!-- B7: Jun-Jul 2025, Hindalco -->
-  <g transform="translate(960 130)">
-    <circle r="11" fill="url(#burnAmber)" class="pulse-late"/>
-    <circle r="3.5" class="amb"/>
-    <text x="-16" y="-14" class="mono amb" font-size="10" letter-spacing="2" text-anchor="end">B-07</text>
-    <text x="-16" y="-4"  class="mono text" font-size="10" text-anchor="end">Hindalco · industrial intern</text>
-    <text x="-16" y="6"   class="mono soft" font-size="9" text-anchor="end">downtime −20% · cost −15%</text>
-  </g>
-
-  <!-- B8: Jun 2025, Kalakraft -->
-  <g transform="translate(940 110)">
-    <circle r="8" fill="url(#burnCyan)" class="pulse"/>
-    <circle r="3" class="cyan"/>
-    <text x="14" y="-6" class="mono cyan" font-size="10" letter-spacing="2">B-08</text>
-    <text x="14" y="6"  class="mono text" font-size="10">Kalakraft · prod ship</text>
-  </g>
-
-  <!-- B9: now -->
-  <g transform="translate(1120 70)">
-    <circle r="14" fill="url(#burnCyan)" class="pulse"/>
-    <circle r="14" fill="none" stroke="#38BDF8" stroke-width="1" opacity="0.6">
-      <animate attributeName="r" values="14;28;14" dur="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.4s" repeatCount="indefinite"/>
+  <!-- B-05 · Feb 2025 · CT Denoise (ongoing) -->
+  <g transform="translate(720 185)">
+    <circle r="14" fill="none" stroke="#10B981" stroke-width="0.8" opacity="0.55">
+      <animate attributeName="r" values="14;24;14" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0;0.55" dur="2.8s" repeatCount="indefinite"/>
     </circle>
+    <circle r="11" fill="url(#burnGreen)" class="firing"/>
+    <circle r="3.5" class="grn"/>
+    <text x="14" y="-14" class="mono grn"  font-size="10" letter-spacing="2">B-05 · firing</text>
+    <text x="14" y="-4"  class="mono text" font-size="10">CT denoising U-Net</text>
+    <text x="14" y="6"   class="mono soft" font-size="9">+12 dB PSNR · 95% noise↓</text>
+  </g>
+
+  <!-- B-06 · Mar 2025 · IIT Madras (longest still firing) -->
+  <g transform="translate(820 150)">
+    <circle r="18" fill="none" stroke="#10B981" stroke-width="0.9" opacity="0.5">
+      <animate attributeName="r" values="18;32;18" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="13" fill="url(#burnGreen)" class="firing"/>
+    <circle r="4" class="grn"/>
+    <text x="-16" y="-22" class="mono grn"  font-size="10" letter-spacing="2" text-anchor="end">B-06 · MAJOR · firing</text>
+    <text x="-16" y="-10" class="mono text" font-size="10" text-anchor="end">IIT Madras · research intern</text>
+    <text x="-16" y="2"   class="mono soft" font-size="9"  text-anchor="end">3.59M records · 8,567 anom · WMAPE 8.37%</text>
+  </g>
+
+  <!-- B-07 · Jun-Jul 2025 · Hindalco -->
+  <g transform="translate(920 118)">
+    <circle r="9" fill="url(#burnAmber)" class="pulse-late"/>
+    <circle r="3" class="amb"/>
+    <text x="14" y="20" class="mono amb"  font-size="10" letter-spacing="2">B-07</text>
+    <text x="14" y="30" class="mono text" font-size="10">Hindalco · industrial</text>
+    <text x="14" y="40" class="mono soft" font-size="9">downtime −20% · cost −15%</text>
+  </g>
+
+  <!-- B-08 · Jun 2025 · Kalakraft (parallel) -->
+  <g transform="translate(1010 95)">
+    <circle r="8" fill="url(#burnCyan)" class="pulse-slow"/>
+    <circle r="3" class="cyan"/>
+    <text x="-14" y="-14" class="mono cyan" font-size="10" letter-spacing="2" text-anchor="end">B-08</text>
+    <text x="-14" y="-4"  class="mono text" font-size="10" text-anchor="end">Kalakraft · prod ship</text>
+    <text x="-14" y="6"   class="mono soft" font-size="9"  text-anchor="end">Next.js · Prisma · Pusher</text>
+  </g>
+
+  <!-- B-09 · NOW -->
+  <g transform="translate(1120 70)">
+    <circle r="20" fill="none" stroke="#38BDF8" stroke-width="1" opacity="0.55">
+      <animate attributeName="r" values="14;34;14" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0;0.55" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="14" fill="url(#burnCyan)" class="firing"/>
     <circle r="4.5" class="cyan"/>
     <text x="-16" y="-22" class="mono cyan" font-size="11" letter-spacing="3" text-anchor="end">[ NOW ]</text>
-    <text x="-16" y="-8"  class="mono text" font-size="10" text-anchor="end">GlassBox · AutoScaler</text>
-    <text x="-16" y="4"   class="mono soft" font-size="9" text-anchor="end">refusal-routing · K8s self-heal</text>
-    <text x="-16" y="16"  class="mono amb"  font-size="9" text-anchor="end">AWS ML SPECIALTY · armed</text>
+    <text x="-16" y="-8"  class="mono text" font-size="10" text-anchor="end">Glassbox · Autoscaler</text>
+    <text x="-16" y="4"   class="mono soft" font-size="9"  text-anchor="end">refusal routing · K8s self-heal</text>
+    <text x="-16" y="16"  class="mono amb"  font-size="9"  text-anchor="end">AWS ML SPECIALTY · armed</text>
   </g>
 
-  <!-- traveling marker -->
+  <!-- traveling rocket marker -->
   <g class="rocket">
     <circle r="3" class="amb"/>
     <circle r="6" fill="#F59E0B" opacity="0.35"/>

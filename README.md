@@ -17,6 +17,8 @@
   <img src="./assets/hud-header.svg" alt="Mission Control HUD · yash-01" width="100%"/>
 </p>
 
+> **the HUD above is alive.** the `T+` timer, the `commits / 30d` count, and the `last push` timestamp are not decorative — a github action regenerates them every 6 hours by querying the github api and rewriting these SVGs in place. you're looking at a self-observing artifact, which is the same thing the projects below are about: systems that can _explain themselves_.
+
 ```txt
 > downlink established. listening.
 > i build AI/ML systems where the hard parts are inspectable —
@@ -47,24 +49,28 @@ every milestone is a **burn** — a controlled change in heading. burn 06 (IIT M
 
 ## ► PAYLOAD MANIFEST
 
-six payloads in the cargo bay. two in active orbit, two recently deployed to prod, two in archive (still callable).
+6 systems in the cargo bay. 2 currently firing in orbit, 2 deployed to production, 1 ongoing research, 1 industrial re-entry complete. each one earned its slot.
 
 <p align="center">
   <img src="./assets/payloads.svg" alt="Payload manifest · 6 systems" width="100%"/>
 </p>
 
-| ID        | repo / artifact                                                                                       | role on mission                                                              |
-| --------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `PYL-001` | [**Glassbox**](https://github.com/yash-vks-chauhan/Glassbox)                                          | grounded LLM · refusal-routing · audit replay · trust scoring                |
-| `PYL-002` | [**Autoscaler**](https://github.com/yash-vks-chauhan/Autoscaler)                                      | self-healing K8s · IsolationForest + LSTM-AE · LLM RCA w/ in-cluster RF fallback |
-| `PYL-003` | [**CT-Denoising-U-Net**](https://github.com/yash-vks-chauhan/CT-Denoising-U-Net)                      | mixed-precision U-Net · +12 dB PSNR · 95% noise reduction on lung CT         |
-| `PYL-004` | _IIT Madras · ambulance dispatch (private)_                                                           | 3.59M records · XGBoost + SHAP · WMAPE 8.37% · TDI & QSI stability indices   |
-| `PYL-005` | [**Kalakraftdev**](https://github.com/yash-vks-chauhan/Kalakraftdev) · Hindalco (industrial)          | prod marketplace · industrial PdM with downtime −20% / maint cost −15%       |
-| `PYL-006` | _archive_                                                                                             | fraud-detector 97.34% acc · RN+Expo ticketing app w/ RBAC                    |
+| ID        | status        | repo / artifact                                                                       | role on mission                                                                  |
+| --------- | ------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `PYL-001` | **firing**    | [**Glassbox**](https://github.com/yash-vks-chauhan/Glassbox)                          | grounded LLM · refusal-routing · audit replay · trust scoring                    |
+| `PYL-002` | **firing**    | [**Autoscaler**](https://github.com/yash-vks-chauhan/Autoscaler)                      | self-healing K8s · IsolationForest + LSTM-AE · LLM RCA w/ in-cluster RF fallback |
+| `PYL-003` | ongoing       | [**CT-Denoising-U-Net**](https://github.com/yash-vks-chauhan/CT-Denoising-U-Net)      | mixed-precision U-Net · **+12 dB PSNR** · **95% noise↓** on lung CT              |
+| `PYL-004` | active orbit  | IIT Madras · ambulance dispatch _(closed-source research)_                            | **3.59M** records · XGBoost + SHAP · **WMAPE 8.37%** · TDI & QSI stability       |
+| `PYL-005` | deployed      | [**Kalakraftdev**](https://github.com/yash-vks-chauhan/Kalakraftdev)                  | prod marketplace · Next.js · Prisma · Pusher real-time · Sendinblue flows        |
+| `PYL-006` | re-entered    | Hindalco · electrical & instrumentation _(industrial · private)_                      | predictive maintenance · MTell · ARIMA · **downtime −20%** · **maint cost −15%** |
+
+<sub><i><strong>also in the archive (proofs callable, not pictured):</strong> <code>fraud-detection-system</code> (TF DNN · 97.34% acc · SMOTE) · <code>appointment-ticketing-app</code> (RN + Expo + TS + SQL · RBAC)</i></sub>
 
 ---
 
 ## ► PRE-FLIGHT CHECKLIST
+
+`☑` = flight-rated · `◧` = arming · `☐` = on the manifest, not yet flown
 
 <table>
 <tr>
@@ -72,30 +78,33 @@ six payloads in the cargo bay. two in active orbit, two recently deployed to pro
 
 **core stack**
 
-- [x] Python · Pandas · NumPy · SciPy
-- [x] TypeScript · C++ · SQL
-- [x] git · docker · linux
-- [x] OOP · DSA · OS · CompOrg
+- `☑` Python · Pandas · NumPy · SciPy
+- `☑` TypeScript · C++ · SQL
+- `☑` git · docker · linux
+- `☑` OOP · DSA · OS · CompOrg
+- `◧` Rust _(personal-time burn)_
 
 </td>
 <td valign="top" width="34%">
 
 **ML / DL**
 
-- [x] scikit-learn · XGBoost · SHAP
-- [x] TensorFlow · Keras · PyTorch
-- [x] anomaly detection · CV · medical imaging
-- [x] ARIMA · SMOTE · CLAHE · AMP
+- `☑` scikit-learn · XGBoost · SHAP
+- `☑` TensorFlow · Keras · PyTorch
+- `☑` anomaly detection · CV · medical imaging
+- `☑` ARIMA · SMOTE · CLAHE · AMP
+- `◧` diffusion models · GANs _(CT roadmap)_
 
 </td>
 <td valign="top" width="33%">
 
 **systems / product**
 
-- [x] FastAPI · Next.js · React · React Native
-- [x] PostgreSQL · Prisma · Firebase
-- [x] Prometheus · Kubernetes · Docker
-- [x] Cloudinary · Pusher · Sendinblue
+- `☑` FastAPI · Next.js · React · React Native
+- `☑` PostgreSQL · Prisma · Firebase
+- `☑` Prometheus · Kubernetes · Docker
+- `☑` Cloudinary · Pusher · Sendinblue
+- `☐` Terraform · gRPC · Kafka _(next quarter)_
 
 </td>
 </tr>
@@ -104,11 +113,11 @@ six payloads in the cargo bay. two in active orbit, two recently deployed to pro
 **certifications · ground school**
 
 - `▣` **AWS Cloud Practitioner** — _Amazon Web Services_
-- `▣` **AWS Certified Machine Learning – Specialty** — _Amazon Web Services_
+- `▣` **AWS Certified Machine Learning – Specialty** — _Amazon Web Services · armed_
 - `▣` **Deep Learning Specialization** — _DeepLearning.AI · Andrew Ng_
 - `▣` **Machine Learning Specialization** — _DeepLearning.AI · Andrew Ng_
 - `▣` **Mathematics for ML** — _DeepLearning.AI · Andrew Ng_
-- `▣` **MATLAB ML toolchain** — _MathWorks (Onramp · ML · Data Viz)_
+- `▣` **MATLAB ML toolchain** — _MathWorks · Onramp · ML · Data Viz_
 
 ---
 
@@ -182,21 +191,41 @@ at **Hindalco** the anomaly model could detect drift weeks ahead. the wins (down
 
 ## ► COMMS
 
-```txt
-TX :  yash.vks.chauhan@gmail.com           // open channel · preferred
-TX :  linkedin.com/in/yash-vks-chauhan      // long-form / formal
-TX :  github.com/yash-vks-chauhan            // source of truth · this artifact
-RX :  +91 8208 9529 85                       // emergency frequency
-LOC:  Chennai, IN · GMT+5:30                 // local sidereal time
-SLA:  recruiter DMs answered at p95 < 48h    // outages happen during exam burns
-```
+<p align="center">
+  <img src="./assets/comms-console.svg" alt="Comms console · 5 channels tuned" width="100%"/>
+</p>
+
+[![Email](https://img.shields.io/badge/yash.vks.chauhan%40gmail.com-OPEN_CHANNEL-0D1117?style=for-the-badge&logo=protonmail&logoColor=10B981&labelColor=0D1117&color=10B981)](mailto:yash.vks.chauhan@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/in%2Fyash--vks--chauhan-LONGFORM-0D1117?style=for-the-badge&logo=linkedin&logoColor=38BDF8&labelColor=0D1117&color=38BDF8)](https://www.linkedin.com/in/yash-vks-chauhan)
+[![GitHub](https://img.shields.io/badge/yash--vks--chauhan-SRC-0D1117?style=for-the-badge&logo=github&logoColor=C9D1D9&labelColor=0D1117&color=C9D1D9)](https://github.com/yash-vks-chauhan)
 
 ---
 
 ## ► ENGINEERING TASTE
 
-I like projects where the hard parts are **inspectable**: what data entered, what changed, what _confidence_ actually means, what failed, what recovered, and what evidence is left behind. the systems I want to build are the kind that, when something goes wrong, _explain themselves_ — without anyone having to ssh into a box at 2am to find out.
+i like projects where the hard parts are **inspectable**: what data entered, what changed, what _confidence_ actually means, what failed, what recovered, and what evidence is left behind. the systems i want to build are the kind that, when something goes wrong, _explain themselves_ — without anyone having to ssh into a box at 2am to find out.
+
+> **a hypothesis i'm testing:** that the next decade of useful ML systems will be judged not on benchmark accuracy but on _auditability_. that's the bet behind Glassbox, Autoscaler, and the way i wrote this very README.
 
 ---
 
-<sub><i><strong>about this README:</strong> it is a self-observing artifact. the HUD's <code>T+</code> timer, the <code>commits / 30d</code> counter, the <code>last push</code> timestamp, the trajectory's <em>now</em> label, the telemetry panel's bars, language mix, repo / star / commit stats, and the latest-push audit log are all regenerated from the live github api by <a href="./.github/workflows/telemetry.yml">.github/workflows/telemetry.yml</a> running <a href="./.github/scripts/update_telemetry.py">update_telemetry.py</a>. orange bars in the commit chart are days where my activity exceeded μ + 2σ — i.e., anomalies in my own behavior, flagged the same way Autoscaler would flag a pod. fitting, since the whole point of this profile is that the systems I build should be able to explain themselves. so should I.</i></sub>
+## ► BLACK BOX
+
+```txt
+═══════════════════════════════════════════════════════════════════════════════
+  FLIGHT RECORDER · yash-01                                  end-of-transmission
+───────────────────────────────────────────────────────────────────────────────
+  callsign      :  chauhan, y.                              ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮
+  mission       :  AI/ML systems that explain themselves                  ▮▮▮▮▮
+  primary phase :  IIT-M research · Glassbox · Autoscaler              ▮▮▮▮▮▮▮▮
+  spec          :  CSE · Artificial Intelligence & Machine Learning  ▮▮▮▮▮▮▮▮▮▮
+  affiliation   :  SRM IST · IIT Madras (research) · Hindalco (alumni)   ▮▮▮▮▮▮
+  certs armed   :  AWS ML Specialty · AWS CP · DL.AI ×3 · MathWorks ×4
+───────────────────────────────────────────────────────────────────────────────
+  log integrity :  ✓ verified           audit trail :  github.com commits
+  next sample   :  +6h                  signal lock :  ◉ green
+═══════════════════════════════════════════════════════════════════════════════
+                  > end of recording. mission in progress. _
+```
+
+<sub><i><strong>about this README:</strong> it is a self-observing artifact. the HUD's <code>T+</code> timer, the <code>commits / 30d</code> counter, the <code>last push</code> timestamp, the trajectory's <em>now</em> label, the telemetry panel's bars, language mix, repo / star / commit stats, and the latest-push audit log are all regenerated from the live github api by <a href="./.github/workflows/telemetry.yml">.github/workflows/telemetry.yml</a> running <a href="./.github/scripts/update_telemetry.py">update_telemetry.py</a>. orange bars in the commit chart are days where my activity exceeded μ + 2σ — i.e., anomalies in my own behavior, flagged the same way Autoscaler would flag a pod. fitting, since the whole point of this profile is that the systems i build should be able to explain themselves. so should i.</i></sub>
