@@ -42,7 +42,7 @@
     <circle r="4" class="grn pulse"/>
     <text x="12" y="4" class="mono grn" font-size="11" letter-spacing="2">SIGNAL LOCK</text>
   </g>
-  <text x="32" y="86" class="mono soft" font-size="11">auto-refreshes every 6h via github actions · last sample <tspan class="cyan" id="tel-updated">2026-06-17 11:19Z</tspan></text>
+  <text x="32" y="86" class="mono soft" font-size="11">auto-refreshes every 6h via github actions · last sample <tspan class="cyan" id="tel-updated">2026-06-17 16:09Z</tspan></text>
 
   <!-- ===== COMMIT ACTIVITY CHART ===== -->
   <g transform="translate(32 120)">
@@ -145,7 +145,7 @@
       <text class="mono dim" font-size="9" letter-spacing="2">REPOS · STARS · TOTAL CMTS</text>
       <g transform="translate(0 18)" class="mono">
         <text class="ttl" font-size="22" font-weight="700" id="tel-stat-repos">10</text>
-        <text x="110" class="ttl" font-size="22" font-weight="700" id="tel-stat-stars">13</text>
+        <text x="110" class="ttl" font-size="22" font-weight="700" id="tel-stat-stars">14</text>
         <text x="220" class="ttl" font-size="22" font-weight="700" id="tel-stat-commits">0</text>
       </g>
     </g>
