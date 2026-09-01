@@ -106,7 +106,7 @@
     <text x="960"  y="418" text-anchor="middle" letter-spacing="1">T+22m</text>
     <text x="960"  y="430" text-anchor="middle" fill="#8B949E">Jun 2025</text>
     <text x="1140" y="418" text-anchor="middle" letter-spacing="1">T+now</text>
-    <text x="1140" y="430" text-anchor="middle" fill="#38BDF8" id="traj-now">Aug 2026</text>
+    <text x="1140" y="430" text-anchor="middle" fill="#38BDF8" id="traj-now">Sep 2026</text>
   </g>
 
   <!-- horizon glow -->
