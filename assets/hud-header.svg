@@ -126,7 +126,7 @@
       <text x="132" y="0" class="dim">·</text>
       <text x="148" y="0" class="text"><tspan id="hud-commits">0</tspan> commits / 30d</text>
       <text x="340" y="0" class="dim">·</text>
-      <text x="356" y="0" class="text">last push <tspan class="cyan" id="hud-lastpush">10d ago</tspan></text>
+      <text x="356" y="0" class="text">last push <tspan class="cyan" id="hud-lastpush">11d ago</tspan></text>
     </g>
 
     <!-- mini telemetry strip -->
